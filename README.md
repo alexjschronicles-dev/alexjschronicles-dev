@@ -16,7 +16,7 @@
 
 ⭐ ART OF LOVE
 
-⭐ Hazel Gaming
+⭐ Hazel Gaming BOT 
 
 ⭐ Discord Ticket System
 
