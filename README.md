@@ -1,16 +1,45 @@
 ## Hi there 👋
 
-<!--
-**alexjschronicles-dev/alexjschronicles-dev** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+👤 Alex J S
 
-Here are some ideas to get you started:
+👑 Founder of CHRONICLES
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🤖 Creator of ART OF LOVE
+
+🌐 https://loveofart.online
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+📌 Featured Projects
+
+⭐ ART OF LOVE
+
+⭐ CHRONICLES
+
+⭐ Hazel Gaming
+
+⭐ Discord Ticket System
+
+⭐ Portfolio
+
+⭐ Utilities
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+📈 GitHub Stats
+
+🔥 Contribution Streak
+
+🏆 GitHub Trophies
+
+📊 Activity Graph
+
+🐍 Contribution Snake
+
+━━━━━━━━━━━━━━━━━━━━━━
+
+💬 Discord
+
+🌐 Website
+
+🔗 Link Hub
