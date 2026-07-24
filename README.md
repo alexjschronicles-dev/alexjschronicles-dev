@@ -2,11 +2,13 @@
 
 👤 Alex J S
 
-👑 Founder of CHRONICLES
+👑 Founder of CHRONICLES COMMUNITY ( DISCORD - 2020)
 
 🤖 Creator of ART OF LOVE
 
+🌐 https://discord.gg/CRbua5bHNV
 🌐 https://loveofart.online
+
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
@@ -14,15 +16,12 @@
 
 ⭐ ART OF LOVE
 
-⭐ CHRONICLES
-
 ⭐ Hazel Gaming
 
 ⭐ Discord Ticket System
 
 ⭐ Portfolio
 
-⭐ Utilities
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
@@ -37,9 +36,3 @@
 🐍 Contribution Snake
 
 ━━━━━━━━━━━━━━━━━━━━━━
-
-💬 Discord
-
-🌐 Website
-
-🔗 Link Hub
