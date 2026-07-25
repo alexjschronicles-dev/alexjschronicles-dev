@@ -104,7 +104,7 @@ const alex = {
 
 | Project | Description | Tech |
 |----------|-------------|------|
-| 🤖 Hazel Gaming | Premium Discord Bot with Moderation, Utility, Music & Verification | Discord.js |
+| 🤖 ART OF LOVE  | Premium Discord Bot with Moderation, Utility  | Discord.js |
 | 💜 Chronicles Community | Community Management Platform | Node.js |
 | 🌐 Portfolio Website | Modern Animated Portfolio | HTML CSS JS |
 | 🎵 Music Website | Lavalink Music Streaming Platform | React |
