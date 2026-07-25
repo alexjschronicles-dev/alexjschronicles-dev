@@ -94,7 +94,7 @@ const alex = {
 
 <div align="center">
 
-<img src="./assets/trophies.svg?v=1" width="95%">
+<img src="./trophies.svg?v=1" width="95%">
 
 </div>
 
