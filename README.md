@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="[./banner-dark.svg?v=1](https://cdn.discordapp.com/attachments/1096308332337299507/1530662335243620553/file_00000000a4bc8208b67a0e6922d500a8.png?ex=6a6663e3&is=6a651263&hm=c4be3cfadf01206b979cbe06f0430c0a6bb5ca938790751e522ec31b290731b3&)">
-  <source media="(prefers-color-scheme: light)" srcset="./banner-light.svg?v=1">
-  <img alt="ALEX JS Banner" src="[./banner-dark.svg?v=](https://cdn.discordapp.com/attachments/1096308332337299507/1530662335243620553/file_00000000a4bc8208b67a0e6922d500a8.png?ex=6a6663e3&is=6a651263&hm=c4be3cfadf01206b979cbe06f0430c0a6bb5ca938790751e522ec31b290731b3&)1" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.png?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg?v=1">
+  <img alt="ALEX JS Banner" src="./assets/banner-dark.png?v=1" width="100%">
 </picture>
 
 # 👋 Hey, I'm ALEX JS
@@ -117,7 +117,7 @@ const alex = {
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_GITHUB_USERNAME&theme=github-compact&hide_border=true">
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=alexjschronicles-dev&theme=github-compact&hide_border=true">
 
 </div>
 
@@ -131,15 +131,15 @@ const alex = {
 
 <source
 media="(prefers-color-scheme: dark)"
-srcset="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/output/github-contribution-grid-snake-dark.svg">
+srcset="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake-dark.svg">
 
 <source
 media="(prefers-color-scheme: light)"
-srcset="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/output/github-contribution-grid-snake.svg">
+srcset="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake.svg">
 
 <img
 alt="Snake Animation"
-src="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/output/github-contribution-grid-snake-dark.svg">
+src="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake-dark.svg">
 
 </picture>
 
