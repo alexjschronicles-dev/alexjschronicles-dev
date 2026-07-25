@@ -11,7 +11,7 @@
 ### 💜 Discord Bot Developer • 🌐 Frontend Web Developer • 🚀 Founder of Chronicles Community
 
 <p>
-  <img src="https://komarev.com/ghpvc/?username=YOUR_GITHUB_USERNAME&label=Profile%20Views&color=4FC3F7&style=for-the-badge" />
+  <img src="https://komarev.com/ghpvc/?username=alexjschronicles-dev&label=Profile%20Views&color=4FC3F7&style=for-the-badge" />
 </p>
 
 <p>
