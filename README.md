@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg?v=1">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg?v=1">
-  <img alt="ALEX JS Banner" src="./assets/banner-dark.svg?v=1" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./banner-dark.svg?v=1">
+  <source media="(prefers-color-scheme: light)" srcset="./banner-light.svg?v=1">
+  <img alt="ALEX JS Banner" src="./banner-dark.svg?v=1" width="100%">
 </picture>
 
 # 👋 Hey, I'm ALEX JS
@@ -32,7 +32,7 @@
 
 ---
 
-<img src="./assets/lanyard.svg?v=1" width="380">
+<img src="./lanyard.svg?v=1" width="380">
 
 </div>
 
