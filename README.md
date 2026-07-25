@@ -83,8 +83,8 @@ const alex = {
 
 <div align="center">
 
-<img src="./assets/stats.svg?v=1" width="47%">
-<img src="./assets/langs.svg?v=1" width="47%">
+<img src="./stats.svg?v=1" width="47%">
+<img src="./langs.svg?v=1" width="47%">
 
 </div>
 
