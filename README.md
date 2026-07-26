@@ -173,7 +173,7 @@ src="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev
 <img src="https://img.shields.io/badge/Website-00BCD4?style=for-the-badge&logo=googlechrome&logoColor=white">
 </a>
 
-<a href="https://github.com/YOUR_GITHUB_USERNAME">
+<a href="https://github.com/alexjschronicles-dev">
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github">
 </a>
 
