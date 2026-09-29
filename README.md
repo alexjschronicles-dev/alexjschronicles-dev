@@ -130,7 +130,7 @@ const alex = {
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=alexjschronicles-dev&theme=react-dark&hide_border=true&bg_color=050505&color=ff1e42&line=ff1e42&point=ffffff&area=true&area_color=ff1e42" width="97%"/>
+<img src="https://streak-stats.demolab.com/?user=alexjschronicles-dev&theme=dark&background=050505&border=ff1e42&stroke=ff1e42&ring=ff1e42&fire=ff1e42&currStreakLabel=ff1e42&sideNums=ffffff&sideLabels=ff4d6d&dates=888888" width="97%" alt="Contribution Activity"/>
 
 </div>
 
@@ -140,14 +140,7 @@ const alex = {
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"
-          srcset="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)"
-          srcset="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake.svg"/>
-  <img alt="Contribution Snake"
-       src="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake-dark.svg"/>
-</picture>
+<img src="./snake.svg" width="100%" alt="Contribution Snake"/>
 
 </div>
 
