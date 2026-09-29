@@ -1,319 +1,200 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
-
 <defs>
+  <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#040c1a"/>
+    <stop offset="50%"  stop-color="#081428"/>
+    <stop offset="100%" stop-color="#040c1a"/>
+  </linearGradient>
+  <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#FFD700"/>
+    <stop offset="100%" stop-color="#FF9500"/>
+  </linearGradient>
+  <linearGradient id="card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#0d1f3c"/>
+    <stop offset="100%" stop-color="#162d52"/>
+  </linearGradient>
+  <linearGradient id="title-g2" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#FFD700"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+  </linearGradient>
+  <linearGradient id="c1-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#FFD700"/>
+    <stop offset="100%" stop-color="#FF9500"/>
+  </linearGradient>
+  <linearGradient id="c6-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#FFD700"/>
+    <stop offset="100%" stop-color="#a855f7"/>
+  </linearGradient>
 
-<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-<stop offset="0%" stop-color="#071426"/>
-<stop offset="100%" stop-color="#102540"/>
-</linearGradient>
+  <filter id="g2" x="-20%" y="-50%" width="140%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="sg2" x="-30%" y="-80%" width="160%" height="260%">
+    <feGaussianBlur stdDeviation="8" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
 
-<linearGradient id="gold">
-<stop offset="0%" stop-color="#FFD54F"/>
-<stop offset="100%" stop-color="#FF9800"/>
-</linearGradient>
-
-<linearGradient id="blue">
-<stop offset="0%" stop-color="#00C6FF"/>
-<stop offset="100%" stop-color="#0072FF"/>
-</linearGradient>
-
+  <clipPath id="trophy-clip">
+    <rect x="10" y="10" width="880" height="400" rx="20"/>
+  </clipPath>
 </defs>
 
-<rect width="900" height="420" rx="28" fill="url(#bg)"/>
+<style>
+.t-star { animation: t-twinkle var(--d,3s) var(--del,0s) infinite ease-in-out; }
+@keyframes t-twinkle { 0%,100%{opacity:.1} 50%{opacity:.85} }
 
-<text x="40" y="55"
-font-size="34"
-font-family="Segoe UI"
-font-weight="bold"
-fill="#7FDBFF">
-🏆 GitHub Achievements
-</text>
+.t-shimmer { animation: t-sweep 8s 2s infinite linear; }
+@keyframes t-sweep { from{transform:translateX(-400px) rotate(-15deg)} to{transform:translateX(1400px) rotate(-15deg)} }
 
-<!-- CARD 1 -->
+/* Card entrance animations */
+.tcard { opacity:0; transform:translateY(22px); animation:card-in .65s forwards ease-out; }
+.tc1{animation-delay:.15s} .tc2{animation-delay:.35s} .tc3{animation-delay:.55s}
+.tc4{animation-delay:.75s} .tc5{animation-delay:.95s} .tc6{animation-delay:1.15s}
+@keyframes card-in { to{opacity:1;transform:translateY(0)} }
 
-<g>
+/* Border glow */
+.glow-border { animation:border-glow 3.5s infinite alternate; }
+@keyframes border-glow { from{stroke:#2166ff;opacity:.7} to{stroke:#00c6ff;opacity:1} }
 
-<rect x="40" y="90"
-width="240"
-height="120"
-rx="18"
-fill="#132A45"
-stroke="#2FB4FF">
+/* Gold border special */
+.gold-border { animation:gold-glow 3s infinite alternate; }
+@keyframes gold-glow { from{stroke:#FFD700;opacity:.6} to{stroke:#FF9500;opacity:1} }
 
-<animate attributeName="opacity"
-values="0;1"
-dur="0.7s"
-fill="freeze"/>
+/* Emoji pulse */
+.emoji-anim { animation:emoji-float 3s infinite ease-in-out; }
+@keyframes emoji-float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
 
-</rect>
+/* Sparkle */
+.t-spark { animation:spark-fade 4s var(--del,0s) infinite ease-in-out; }
+@keyframes spark-fade { 0%,100%{opacity:0;r:1} 50%{opacity:.9;r:3} }
 
-<text x="160"
-y="140"
-text-anchor="middle"
-font-size="42">
-👑
-</text>
+/* Bracket */
+.t-bracket { opacity:.5; animation:t-blink 4s infinite ease-in-out; }
+@keyframes t-blink { 0%,100%{opacity:.5} 50%{opacity:1} }
 
-<text x="160"
-y="175"
-text-anchor="middle"
-fill="white"
-font-size="22"
-font-family="Segoe UI">
-Founder
-</text>
+/* Title shimmer line */
+.title-line { animation:line-expand 1s .2s forwards; transform:scaleX(0); transform-origin:left; }
+@keyframes line-expand { to{transform:scaleX(1)} }
+</style>
 
-<text x="160"
-y="198"
-text-anchor="middle"
-fill="#8FD9FF"
-font-size="16">
-Chronicles Community
-</text>
+<!-- ░░ Background ░░ -->
+<rect width="900" height="420" rx="22" fill="url(#bg2)"/>
 
+<!-- Stars -->
+<circle class="t-star" cx="55"  cy="30"  r="1.5" fill="#4fc3f7" style="--d:2.3s;--del:.2s"/>
+<circle class="t-star" cx="840" cy="18"  r="1"   fill="#fff"    style="--d:3.5s;--del:.8s"/>
+<circle class="t-star" cx="770" cy="45"  r="1.5" fill="#FFD700" style="--d:2.7s;--del:1.1s"/>
+<circle class="t-star" cx="880" cy="90"  r="1"   fill="#a855f7" style="--d:4.1s;--del:.4s"/>
+<circle class="t-star" cx="720" cy="15"  r="1"   fill="#fff"    style="--d:3.0s;--del:1.6s"/>
+<circle class="t-star" cx="620" cy="390" r="1.5" fill="#4fc3f7" style="--d:2.5s;--del:.9s"/>
+<circle class="t-star" cx="20"  cy="380" r="1"   fill="#fff"    style="--d:3.8s;--del:1.4s"/>
+<circle class="t-star" cx="100" cy="400" r="1.5" fill="#FFD700" style="--d:2.2s;--del:2.0s"/>
+<circle class="t-star" cx="450" cy="8"   r="1"   fill="#fff"    style="--d:4.3s;--del:.6s"/>
+<circle class="t-star" cx="350" cy="395" r="1"   fill="#a855f7" style="--d:3.2s;--del:1.7s"/>
+<circle class="t-star" cx="200" cy="12"  r="1.5" fill="#4fc3f7" style="--d:2.9s;--del:.3s"/>
+<circle class="t-star" cx="870" cy="380" r="1"   fill="#fff"    style="--d:3.6s;--del:2.2s"/>
+<circle class="t-star" cx="550" cy="403" r="1"   fill="#FFD700" style="--d:2.4s;--del:1.3s"/>
+<circle class="t-star" cx="30"  cy="200" r="1"   fill="#4fc3f7" style="--d:4.0s;--del:.7s"/>
+<circle class="t-star" cx="880" cy="250" r="1.5" fill="#fff"    style="--d:2.8s;--del:1.9s"/>
+
+<!-- Card frame -->
+<rect x="8"  y="8"  width="884" height="404" rx="22" fill="none"
+      stroke="#1a4d8a" stroke-width="1" opacity=".4"/>
+<rect x="10" y="10" width="880" height="400" rx="20" fill="#080f1e"/>
+
+<!-- Shimmer -->
+<g clip-path="url(#trophy-clip)">
+  <rect class="t-shimmer" x="-300" y="-60" width="90" height="540"
+        fill="white" opacity=".035" transform="rotate(-15)"/>
 </g>
 
-<!-- CARD 2 -->
+<!-- Corner brackets -->
+<path class="t-bracket" d="M26,26 L26,50 M26,26 L50,26" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+<path class="t-bracket" d="M874,26 L874,50 M874,26 L850,26" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+<path class="t-bracket" d="M26,394 L26,370 M26,394 L50,394" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+<path class="t-bracket" d="M874,394 L874,370 M874,394 L850,394" fill="none" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
 
-<g>
+<!-- Title -->
+<text x="42" y="56" font-size="30" font-family="Segoe UI,Arial" font-weight="bold"
+      fill="url(#title-g2)" filter="url(#sg2)">🏆 GitHub Achievements</text>
+<text x="42" y="75" font-size="13" font-family="Segoe UI,Arial" fill="#4a6a8a">Chronicles Developer • ALEX JS</text>
+<rect x="42" y="80" width="420" height="2" rx="1" fill="url(#gold2)" class="title-line"/>
 
-<rect x="330"
-y="90"
-width="240"
-height="120"
-rx="18"
-fill="#132A45"
-stroke="#2FB4FF">
+<!-- ════ ROW 1 ════ -->
 
-<animate attributeName="opacity"
-values="0;1"
-begin="0.3s"
-dur="0.7s"
-fill="freeze"/>
-
-</rect>
-
-<text x="450"
-y="140"
-text-anchor="middle"
-font-size="42">
-🤖
-</text>
-
-<text x="450"
-y="175"
-text-anchor="middle"
-fill="white"
-font-size="22">
-Discord.js
-</text>
-
-<text x="450"
-y="198"
-text-anchor="middle"
-fill="#8FD9FF"
-font-size="16">
-Bot Developer
-</text>
-
+<!-- Card 1: Founder -->
+<g class="tcard tc1">
+  <rect x="28" y="92" width="252" height="128" rx="18" fill="url(#card-bg)" class="gold-border" stroke="#FFD700" stroke-width="1.5"/>
+  <rect x="28" y="92" width="252" height="128" rx="18" fill="url(#card-bg)"/>
+  <rect x="28" y="92" width="252" height="128" rx="18" fill="none" stroke="#FFD700" stroke-width="1.5" class="gold-border" filter="url(#g2)"/>
+  <text x="154" y="143" text-anchor="middle" font-size="36" class="emoji-anim">👑</text>
+  <text x="154" y="173" text-anchor="middle" font-size="20" font-family="Segoe UI,Arial" font-weight="bold" fill="#ffffff">Founder</text>
+  <text x="154" y="194" text-anchor="middle" font-size="13" font-family="Segoe UI,Arial" fill="#8fd9ff">Chronicles Community</text>
 </g>
 
-<!-- CARD 3 -->
-
-<g>
-
-<rect x="620"
-y="90"
-width="240"
-height="120"
-rx="18"
-fill="#132A45"
-stroke="#2FB4FF">
-
-<animate attributeName="opacity"
-values="0;1"
-begin="0.6s"
-dur="0.7s"
-fill="freeze"/>
-
-</rect>
-
-<text x="740"
-y="140"
-text-anchor="middle"
-font-size="42">
-💻
-</text>
-
-<text x="740"
-y="175"
-text-anchor="middle"
-fill="white"
-font-size="22">
-Frontend
-</text>
-
-<text x="740"
-y="198"
-text-anchor="middle"
-fill="#8FD9FF"
-font-size="16">
-Web Developer
-</text>
-
+<!-- Card 2: Discord.js -->
+<g class="tcard tc2">
+  <rect x="324" y="92" width="252" height="128" rx="18" fill="url(#card-bg)"/>
+  <rect x="324" y="92" width="252" height="128" rx="18" fill="none" stroke="#5865F2" stroke-width="1.5" class="glow-border" filter="url(#g2)"/>
+  <text x="450" y="143" text-anchor="middle" font-size="36" class="emoji-anim">🤖</text>
+  <text x="450" y="173" text-anchor="middle" font-size="20" font-family="Segoe UI,Arial" font-weight="bold" fill="#ffffff">Discord.js</text>
+  <text x="450" y="194" text-anchor="middle" font-size="13" font-family="Segoe UI,Arial" fill="#8fd9ff">Bot Developer Pro</text>
 </g>
 
-<!-- CARD 4 -->
-
-<g>
-
-<rect x="40"
-y="250"
-width="240"
-height="120"
-rx="18"
-fill="#132A45"
-stroke="#2FB4FF">
-
-<animate attributeName="opacity"
-values="0;1"
-begin="0.9s"
-dur="0.7s"
-fill="freeze"/>
-
-</rect>
-
-<text x="160"
-y="300"
-text-anchor="middle"
-font-size="42">
-🚀
-</text>
-
-<text x="160"
-y="335"
-text-anchor="middle"
-fill="white"
-font-size="22">
-Projects
-</text>
-
-<text x="160"
-y="358"
-text-anchor="middle"
-fill="#8FD9FF"
-font-size="16">
-Production Ready
-</text>
-
+<!-- Card 3: Frontend -->
+<g class="tcard tc3">
+  <rect x="620" y="92" width="252" height="128" rx="18" fill="url(#card-bg)"/>
+  <rect x="620" y="92" width="252" height="128" rx="18" fill="none" stroke="#00d4ff" stroke-width="1.5" class="glow-border" filter="url(#g2)"/>
+  <text x="746" y="143" text-anchor="middle" font-size="36" class="emoji-anim">💻</text>
+  <text x="746" y="173" text-anchor="middle" font-size="20" font-family="Segoe UI,Arial" font-weight="bold" fill="#ffffff">Frontend</text>
+  <text x="746" y="194" text-anchor="middle" font-size="13" font-family="Segoe UI,Arial" fill="#8fd9ff">Web Craftsman</text>
 </g>
 
-<!-- CARD 5 -->
+<!-- ════ ROW 2 ════ -->
 
-<g>
-
-<rect x="330"
-y="250"
-width="240"
-height="120"
-rx="18"
-fill="#132A45"
-stroke="#2FB4FF">
-
-<animate attributeName="opacity"
-values="0;1"
-begin="1.2s"
-dur="0.7s"
-fill="freeze"/>
-
-</rect>
-
-<text x="450"
-y="300"
-text-anchor="middle"
-font-size="42">
-⭐
-</text>
-
-<text x="450"
-y="335"
-text-anchor="middle"
-fill="white"
-font-size="22">
-Open Source
-</text>
-
-<text x="450"
-y="358"
-text-anchor="middle"
-fill="#8FD9FF"
-font-size="16">
-Always Learning
-</text>
-
+<!-- Card 4: Projects -->
+<g class="tcard tc4">
+  <rect x="28" y="252" width="252" height="128" rx="18" fill="url(#card-bg)"/>
+  <rect x="28" y="252" width="252" height="128" rx="18" fill="none" stroke="#a855f7" stroke-width="1.5" class="glow-border" filter="url(#g2)"/>
+  <text x="154" y="303" text-anchor="middle" font-size="36" class="emoji-anim">🚀</text>
+  <text x="154" y="333" text-anchor="middle" font-size="20" font-family="Segoe UI,Arial" font-weight="bold" fill="#ffffff">Projects</text>
+  <text x="154" y="354" text-anchor="middle" font-size="13" font-family="Segoe UI,Arial" fill="#8fd9ff">Production Ready</text>
 </g>
 
-<!-- CARD 6 -->
-
-<g>
-
-<rect x="620"
-y="250"
-width="240"
-height="120"
-rx="18"
-fill="#132A45"
-stroke="#2FB4FF">
-
-<animate attributeName="opacity"
-values="0;1"
-begin="1.5s"
-dur="0.7s"
-fill="freeze"/>
-
-</rect>
-
-<text x="740"
-y="300"
-text-anchor="middle"
-font-size="42">
-🏅
-</text>
-
-<text x="740"
-y="335"
-text-anchor="middle"
-fill="white"
-font-size="22">
-Premium
-</text>
-
-<text x="740"
-y="358"
-text-anchor="middle"
-fill="#8FD9FF"
-font-size="16">
-Developer
-</text>
-
+<!-- Card 5: Open Source -->
+<g class="tcard tc5">
+  <rect x="324" y="252" width="252" height="128" rx="18" fill="url(#card-bg)"/>
+  <rect x="324" y="252" width="252" height="128" rx="18" fill="none" stroke="#00e676" stroke-width="1.5" class="glow-border" filter="url(#g2)"/>
+  <text x="450" y="303" text-anchor="middle" font-size="36" class="emoji-anim">⭐</text>
+  <text x="450" y="333" text-anchor="middle" font-size="20" font-family="Segoe UI,Arial" font-weight="bold" fill="#ffffff">Open Source</text>
+  <text x="450" y="354" text-anchor="middle" font-size="13" font-family="Segoe UI,Arial" fill="#8fd9ff">Always Learning</text>
 </g>
 
-<!-- Shine -->
+<!-- Card 6: Premium -->
+<g class="tcard tc6">
+  <rect x="620" y="252" width="252" height="128" rx="18" fill="url(#card-bg)"/>
+  <rect x="620" y="252" width="252" height="128" rx="18" fill="none" stroke="url(#c6-stroke)" stroke-width="1.5" class="gold-border" filter="url(#g2)"/>
+  <text x="746" y="303" text-anchor="middle" font-size="36" class="emoji-anim">🏅</text>
+  <text x="746" y="333" text-anchor="middle" font-size="20" font-family="Segoe UI,Arial" font-weight="bold" fill="#ffffff">Premium</text>
+  <text x="746" y="354" text-anchor="middle" font-size="13" font-family="Segoe UI,Arial" fill="#8fd9ff">Developer Elite</text>
+</g>
 
-<rect x="-200"
-y="0"
-width="120"
-height="420"
-fill="white"
-opacity="0.08"
-transform="rotate(-20)">
+<!-- Floating sparkles -->
+<circle class="t-spark" cx="280"  cy="98"  r="2" fill="#FFD700" style="--del:0s"/>
+<circle class="t-spark" cx="576"  cy="92"  r="2" fill="#00d4ff" style="--del:.8s"/>
+<circle class="t-spark" cx="872"  cy="98"  r="2" fill="#a855f7" style="--del:1.6s"/>
+<circle class="t-spark" cx="280"  cy="258" r="2" fill="#a855f7" style="--del:2.4s"/>
+<circle class="t-spark" cx="576"  cy="252" r="2" fill="#00e676" style="--del:.4s"/>
+<circle class="t-spark" cx="872"  cy="258" r="2" fill="#FFD700" style="--del:1.2s"/>
 
-<animate attributeName="x"
-from="-300"
-to="1200"
-dur="4s"
-repeatCount="indefinite"/>
+<!-- Bottom text -->
+<text x="450" y="408" text-anchor="middle" font-size="13" font-family="Segoe UI,Arial"
+      font-weight="bold" fill="url(#gold2)" letter-spacing="3">LEVEL UP YOUR CODE 🔥</text>
 
-</rect>
+<!-- Status dots -->
+<circle cx="844" cy="26" r="3.5" fill="#00ff88" opacity=".9"/>
+<circle cx="858" cy="26" r="3.5" fill="#ffcc00" opacity=".8"/>
+<circle cx="872" cy="26" r="3.5" fill="#ff4d6a" opacity=".8"/>
 
 </svg>
