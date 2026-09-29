@@ -1,214 +1,211 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
-    <defs>
-        <filter id="glow-f" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="3" result="blur" />
-            <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-        <filter id="strong-glow" x="-20%" y="-20%" width="140%" height="140%">
-            <feGaussianBlur stdDeviation="6" result="blur" />
-            <feMerge>
-                <feMergeNode in="blur" />
-                <feMergeNode in="SourceGraphic" />
-            </feMerge>
-        </filter>
-        
-        <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#00ffff" />
-            <stop offset="100%" stop-color="#ffffff" />
-        </linearGradient>
-        <linearGradient id="grad-js" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ffd54f"/><stop offset="100%" stop-color="#ff6f00"/></linearGradient>
-        <linearGradient id="grad-ts" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#64b5f6"/><stop offset="100%" stop-color="#1565c0"/></linearGradient>
-        <linearGradient id="grad-html" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ff8a65"/><stop offset="100%" stop-color="#bf360c"/></linearGradient>
-        <linearGradient id="grad-css" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#81d4fa"/><stop offset="100%" stop-color="#0277bd"/></linearGradient>
-        <linearGradient id="grad-react" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#80deea"/><stop offset="100%" stop-color="#00838f"/></linearGradient>
-        <linearGradient id="grad-node" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#a5d6a7"/><stop offset="100%" stop-color="#2e7d32"/></linearGradient>
-        <linearGradient id="grad-mongo" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#a5d6a7"/><stop offset="100%" stop-color="#558b2f"/></linearGradient>
-        
-        <linearGradient id="shimmer-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
-            <stop offset="50%" stop-color="#00ffff" stop-opacity="0.3" />
-            <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
-        </linearGradient>
+<defs>
+  <linearGradient id="lbg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#060d1b"/>
+    <stop offset="100%" stop-color="#080f1e"/>
+  </linearGradient>
+  <linearGradient id="ltitle" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#00ffff"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+  </linearGradient>
+  <linearGradient id="ljs" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ffd54f"/>
+    <stop offset="100%" stop-color="#ff6f00"/>
+  </linearGradient>
+  <linearGradient id="lts" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#64b5f6"/>
+    <stop offset="100%" stop-color="#1565c0"/>
+  </linearGradient>
+  <linearGradient id="lhtml" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff8a65"/>
+    <stop offset="100%" stop-color="#bf360c"/>
+  </linearGradient>
+  <linearGradient id="lcss" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#81d4fa"/>
+    <stop offset="100%" stop-color="#0277bd"/>
+  </linearGradient>
+  <linearGradient id="lreact" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#80deea"/>
+    <stop offset="100%" stop-color="#00838f"/>
+  </linearGradient>
+  <linearGradient id="lnode" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#a5d6a7"/>
+    <stop offset="100%" stop-color="#2e7d32"/>
+  </linearGradient>
+  <linearGradient id="lmongo" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#c8e6c9"/>
+    <stop offset="100%" stop-color="#558b2f"/>
+  </linearGradient>
 
-        <pattern id="hex-bg" width="30" height="51.96" patternUnits="userSpaceOnUse">
-            <path d="M15 0 L30 8.66 L30 25.98 L15 34.64 L0 25.98 L0 8.66 Z" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.05"/>
-            <path d="M15 51.96 L30 43.3 L30 25.98 L15 34.64 L0 25.98 L0 43.3 Z" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.05"/>
-        </pattern>
-        
-        <style>
-            .bg { fill: #060d1b; }
-            .card { fill: #080f1e; stroke: url(#title-grad); stroke-width: 1.5; stroke-opacity: 0.5; }
-            .title { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 26px; fill: url(#title-grad); }
-            .text { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 600; font-size: 15px; fill: #e2e8f0; }
-            .pct { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; fill: #ffffff; }
-            .bottom-text { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 13px; fill: #94a3b8; letter-spacing: 2px; text-anchor: middle; }
-            
-            @keyframes pulse {
-                0%, 100% { opacity: 1; transform: scale(1) translateY(0); }
-                50% { opacity: 0.6; transform: scale(0.9) translateY(2px); }
-            }
-            .bolt { animation: pulse 2s infinite ease-in-out; transform-origin: center; display: inline-block; }
-            
-            @keyframes twinkle {
-                0%, 100% { opacity: 0; transform: scale(0.5); }
-                50% { opacity: 1; transform: scale(1); }
-            }
-            .star1 { animation: twinkle 3s infinite ease-in-out; }
-            .star2 { animation: twinkle 4s infinite ease-in-out 1s; }
-            .star3 { animation: twinkle 2.5s infinite ease-in-out 0.5s; }
-            
-            @keyframes slideIn {
-                0% { opacity: 0; transform: translateX(-30px); }
-                100% { opacity: 1; transform: translateX(0); }
-            }
-            @keyframes scaleBar {
-                0% { transform: scaleX(0); }
-                100% { transform: scaleX(1); }
-            }
-            @keyframes slideDot {
-                0% { transform: translateX(0); opacity: 0; }
-                10% { opacity: 1; }
-                100% { transform: translateX(var(--target-x)); opacity: 1; }
-            }
-            .row { opacity: 0; animation: slideIn 0.6s forwards ease-out; }
-            .bar-fill { transform: scaleX(0); transform-origin: left; animation: scaleBar 1.8s forwards cubic-bezier(0.1, 0.8, 0.2, 1); }
-            .bar-dot { opacity: 0; animation: slideDot 1.8s forwards cubic-bezier(0.1, 0.8, 0.2, 1); }
-            
-            .row-1 { animation-delay: 0.2s; } .row-1 .bar-fill { animation-delay: 0.4s; } .row-1 .bar-dot { animation-delay: 0.4s; }
-            .row-2 { animation-delay: 0.4s; } .row-2 .bar-fill { animation-delay: 0.6s; } .row-2 .bar-dot { animation-delay: 0.6s; }
-            .row-3 { animation-delay: 0.6s; } .row-3 .bar-fill { animation-delay: 0.8s; } .row-3 .bar-dot { animation-delay: 0.8s; }
-            .row-4 { animation-delay: 0.8s; } .row-4 .bar-fill { animation-delay: 1.0s; } .row-4 .bar-dot { animation-delay: 1.0s; }
-            .row-5 { animation-delay: 1.0s; } .row-5 .bar-fill { animation-delay: 1.2s; } .row-5 .bar-dot { animation-delay: 1.2s; }
-            .row-6 { animation-delay: 1.2s; } .row-6 .bar-fill { animation-delay: 1.4s; } .row-6 .bar-dot { animation-delay: 1.4s; }
-            .row-7 { animation-delay: 1.4s; } .row-7 .bar-fill { animation-delay: 1.6s; } .row-7 .bar-dot { animation-delay: 1.6s; }
+  <filter id="lg" x="-20%" y="-60%" width="140%" height="220%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <filter id="lsg" x="-30%" y="-100%" width="160%" height="300%">
+    <feGaussianBlur stdDeviation="6" result="blur"/>
+    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
 
-            @keyframes sweep {
-                0% { transform: translateX(-100%); }
-                100% { transform: translateX(200%); }
-            }
-            .shimmer {
-                fill: url(#shimmer-grad);
-                animation: sweep 4s infinite linear;
-            }
-            
-            .underline {
-                transform-origin: center;
-                animation: scaleBar 1.5s forwards ease-out 2s;
-                transform: scaleX(0);
-            }
-        </style>
-        <clipPath id="clip-card"><rect width="880" height="400" x="10" y="10" rx="24"/></clipPath>
-    </defs>
-    
-    <rect width="900" height="420" class="bg" rx="24" />
-    <rect width="900" height="420" fill="url(#hex-bg)" />
-    
-    <g fill="#fff">
-        <circle cx="100" cy="80" r="1.5" class="star1" />
-        <circle cx="800" cy="50" r="1" class="star2" />
-        <circle cx="300" cy="350" r="2" class="star3" />
-        <circle cx="700" cy="200" r="1.5" class="star1" />
-        <circle cx="850" cy="300" r="2" class="star2" />
-        <circle cx="50" cy="250" r="1" class="star3" />
-        <circle cx="450" cy="100" r="1.5" class="star1" />
-        <circle cx="550" cy="380" r="1" class="star2" />
-        <circle cx="200" cy="20" r="2" class="star3" />
-        <circle cx="150" cy="300" r="1.5" class="star1" />
-        <circle cx="650" cy="80" r="1" class="star2" />
-        <circle cx="80" cy="150" r="2" class="star3" />
-        <circle cx="750" cy="380" r="1.5" class="star1" />
-        <circle cx="350" cy="50" r="1" class="star2" />
-        <circle cx="400" cy="250" r="2" class="star3" />
-    </g>
+  <clipPath id="lclip">
+    <rect x="10" y="10" width="880" height="400" rx="22"/>
+  </clipPath>
+</defs>
 
-    <rect x="10" y="10" width="880" height="400" rx="24" class="card" filter="url(#glow-f)"/>
-    <g style="clip-path: url(#clip-card);">
-        <rect x="0" y="0" width="400" height="1000" class="shimmer" transform="skewX(-45)" />
-    </g>
+<style>
+/* Twinkling stars */
+.ls{animation:ltw var(--d,3s) var(--e,0s) infinite ease-in-out;}
+@keyframes ltw{0%,100%{opacity:.12}50%{opacity:.9}}
 
-    <path d="M 30 50 L 30 30 L 50 30" fill="none" stroke="#00ffff" stroke-width="4" filter="url(#strong-glow)"/>
-    <path d="M 870 50 L 870 30 L 850 30" fill="none" stroke="#00ffff" stroke-width="4" filter="url(#strong-glow)"/>
-    <path d="M 30 370 L 30 390 L 50 390" fill="none" stroke="#00ffff" stroke-width="4" filter="url(#strong-glow)"/>
-    <path d="M 870 370 L 870 390 L 850 390" fill="none" stroke="#00ffff" stroke-width="4" filter="url(#strong-glow)"/>
+/* Shimmer sweep */
+.lsh{animation:lsw 7s 1s infinite linear;}
+@keyframes lsw{from{transform:translateX(-250px)}to{transform:translateX(1200px)}}
 
-    <text x="40" y="55" class="title">
-        <tspan class="bolt">⚡</tspan> Most Used Languages
-    </text>
-    <line x1="40" y1="75" x2="860" y2="75" stroke="#1e293b" stroke-width="2" />
+/* Bar grow — ONLY animation, rows are always visible */
+.lbar{transform:scaleX(0);transform-origin:left;animation:lgrow 1.4s forwards cubic-bezier(.15,.85,.3,1);}
+.lb1{animation-delay:.2s}.lb2{animation-delay:.4s}.lb3{animation-delay:.6s}
+.lb4{animation-delay:.8s}.lb5{animation-delay:1.0s}.lb6{animation-delay:1.2s}
+.lb7{animation-delay:1.4s}
+@keyframes lgrow{to{transform:scaleX(1)}}
 
-    <!-- 1. JS 95% = 503.5px -->
-    <g class="row row-1" transform="translate(0, 105)">
-        <circle cx="46" cy="7" r="6" fill="#ffd54f" filter="url(#glow-f)"/>
-        <text x="65" y="12" class="text">🟡 JavaScript</text>
-        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
-        <rect x="260" y="0" width="503.5" height="16" rx="8" fill="url(#grad-js)" class="bar-fill"/>
-        <g class="bar-dot" style="--target-x: 753.5px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
-        <text x="830" y="13" class="pct">95%</text>
-    </g>
+/* Corner bracket glow pulse */
+.lbrk{animation:lbp 3s infinite ease-in-out;}
+@keyframes lbp{0%,100%{opacity:.6}50%{opacity:1}}
 
-    <!-- 2. TS 90% = 477px -->
-    <g class="row row-2" transform="translate(0, 145)">
-        <circle cx="46" cy="7" r="6" fill="#64b5f6" filter="url(#glow-f)"/>
-        <text x="65" y="12" class="text">🔵 TypeScript</text>
-        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
-        <rect x="260" y="0" width="477" height="16" rx="8" fill="url(#grad-ts)" class="bar-fill"/>
-        <g class="bar-dot" style="--target-x: 727px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
-        <text x="830" y="13" class="pct">90%</text>
-    </g>
+/* Bolt flicker */
+.lblt{animation:lfl 2s infinite ease-in-out;transform-origin:50px 44px;}
+@keyframes lfl{0%,100%{opacity:1}50%{opacity:.35}}
 
-    <!-- 3. HTML 88% = 466.4px -->
-    <g class="row row-3" transform="translate(0, 185)">
-        <circle cx="46" cy="7" r="6" fill="#ff8a65" filter="url(#glow-f)"/>
-        <text x="65" y="12" class="text">🔴 HTML</text>
-        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
-        <rect x="260" y="0" width="466.4" height="16" rx="8" fill="url(#grad-html)" class="bar-fill"/>
-        <g class="bar-dot" style="--target-x: 716.4px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
-        <text x="830" y="13" class="pct">88%</text>
-    </g>
+/* Percent value pop-in */
+.lpct{opacity:0;animation:lpop .4s forwards ease-out;}
+.lp1{animation-delay:.9s}.lp2{animation-delay:1.1s}.lp3{animation-delay:1.3s}
+.lp4{animation-delay:1.5s}.lp5{animation-delay:1.7s}.lp6{animation-delay:1.9s}
+.lp7{animation-delay:2.1s}
+@keyframes lpop{to{opacity:1}}
 
-    <!-- 4. CSS 85% = 450.5px -->
-    <g class="row row-4" transform="translate(0, 225)">
-        <circle cx="46" cy="7" r="6" fill="#81d4fa" filter="url(#glow-f)"/>
-        <text x="65" y="12" class="text">💙 CSS</text>
-        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
-        <rect x="260" y="0" width="450.5" height="16" rx="8" fill="url(#grad-css)" class="bar-fill"/>
-        <g class="bar-dot" style="--target-x: 700.5px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
-        <text x="830" y="13" class="pct">85%</text>
-    </g>
+/* Dot pulse */
+.ldot{animation:ldp 2.5s var(--e,0s) infinite ease-in-out;}
+@keyframes ldp{0%,100%{opacity:.7;r:5}50%{opacity:1;r:7}}
+</style>
 
-    <!-- 5. React 83% = 439.9px -->
-    <g class="row row-5" transform="translate(0, 265)">
-        <circle cx="46" cy="7" r="6" fill="#80deea" filter="url(#glow-f)"/>
-        <text x="65" y="12" class="text">🩵 React</text>
-        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
-        <rect x="260" y="0" width="439.9" height="16" rx="8" fill="url(#grad-react)" class="bar-fill"/>
-        <g class="bar-dot" style="--target-x: 689.9px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
-        <text x="830" y="13" class="pct">83%</text>
-    </g>
+<!-- Background -->
+<rect width="900" height="420" rx="22" fill="url(#lbg)"/>
 
-    <!-- 6. Node.js 92% = 487.6px -->
-    <g class="row row-6" transform="translate(0, 305)">
-        <circle cx="46" cy="7" r="6" fill="#a5d6a7" filter="url(#glow-f)"/>
-        <text x="65" y="12" class="text">🟢 Node.js</text>
-        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
-        <rect x="260" y="0" width="487.6" height="16" rx="8" fill="url(#grad-node)" class="bar-fill"/>
-        <g class="bar-dot" style="--target-x: 737.6px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
-        <text x="830" y="13" class="pct">92%</text>
-    </g>
+<!-- Stars — always visible with twinkle -->
+<circle class="ls" cx="820" cy="22"  r="1.5" fill="#4fc3f7" style="--d:2.3s;--e:.2s"/>
+<circle class="ls" cx="55"  cy="16"  r="1"   fill="#fff"    style="--d:3.5s;--e:.9s"/>
+<circle class="ls" cx="755" cy="48"  r="1.5" fill="#ffd54f" style="--d:2.7s;--e:1.2s"/>
+<circle class="ls" cx="872" cy="108" r="1"   fill="#a5d6a7" style="--d:4.0s;--e:.4s"/>
+<circle class="ls" cx="675" cy="28"  r="1"   fill="#fff"    style="--d:3.1s;--e:1.7s"/>
+<circle class="ls" cx="28"  cy="295" r="1.5" fill="#4fc3f7" style="--d:2.5s;--e:.7s"/>
+<circle class="ls" cx="875" cy="372" r="1"   fill="#fff"    style="--d:3.8s;--e:1.4s"/>
+<circle class="ls" cx="118" cy="398" r="1.5" fill="#ffd54f" style="--d:2.2s;--e:2.0s"/>
+<circle class="ls" cx="450" cy="10"  r="1"   fill="#fff"    style="--d:4.2s;--e:.6s"/>
+<circle class="ls" cx="355" cy="400" r="1"   fill="#80deea" style="--d:3.3s;--e:1.8s"/>
+<circle class="ls" cx="198" cy="14"  r="1.5" fill="#4fc3f7" style="--d:2.9s;--e:.3s"/>
+<circle class="ls" cx="622" cy="408" r="1"   fill="#fff"    style="--d:3.6s;--e:2.2s"/>
 
-    <!-- 7. MongoDB 78% = 413.4px -->
-    <g class="row row-7" transform="translate(0, 345)">
-        <circle cx="46" cy="7" r="6" fill="#a5d6a7" filter="url(#glow-f)"/>
-        <text x="65" y="12" class="text">🍃 MongoDB</text>
-        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
-        <rect x="260" y="0" width="413.4" height="16" rx="8" fill="url(#grad-mongo)" class="bar-fill"/>
-        <g class="bar-dot" style="--target-x: 663.4px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
-        <text x="830" y="13" class="pct">78%</text>
-    </g>
+<!-- Card -->
+<rect x="10" y="10" width="880" height="400" rx="22"
+      fill="#080f1e" stroke="url(#ltitle)" stroke-width="1.5" stroke-opacity=".6"/>
 
-    <text x="450" y="390" class="bottom-text">KEEP CODING • KEEP GROWING 🚀</text>
-    <rect x="350" y="400" width="200" height="2" fill="url(#title-grad)" class="underline" rx="1"/>
+<!-- Shimmer (clipped) -->
+<g clip-path="url(#lclip)">
+  <rect class="lsh" x="-160" y="0" width="60" height="420"
+        fill="white" opacity=".055" transform="skewX(-15)"/>
+</g>
+
+<!-- Corner brackets -->
+<path class="lbrk" d="M28,28 L28,54 M28,28 L54,28"
+      fill="none" stroke="#00ffff" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
+<path class="lbrk" d="M872,28 L872,54 M872,28 L846,28"
+      fill="none" stroke="#00ffff" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
+<path class="lbrk" d="M28,392 L28,366 M28,392 L54,392"
+      fill="none" stroke="#00ffff" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
+<path class="lbrk" d="M872,392 L872,366 M872,392 L846,392"
+      fill="none" stroke="#00ffff" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
+
+<!-- Title -->
+<text x="42"  y="50" class="lblt" font-size="22" font-family="Segoe UI,Arial,sans-serif">⚡</text>
+<text x="70"  y="50" font-size="26" font-family="Segoe UI,Arial,sans-serif" font-weight="800"
+      fill="url(#ltitle)" filter="url(#lsg)">Most Used Languages</text>
+<!-- Divider line -->
+<rect x="40" y="62" width="820" height="1.5" rx="1" fill="#1e2d45"/>
+
+<!-- ═══ Row 1 — JavaScript 95% ═══ -->
+<!-- dot + label (always visible) -->
+<circle cx="48" cy="100" r="6" fill="#ffd54f" filter="url(#lg)" class="ldot" style="--e:0s"/>
+<text x="64" y="105" font-size="15" font-family="Segoe UI,Arial,sans-serif"
+      font-weight="600" fill="#e2e8f0">🟡 JavaScript</text>
+<!-- track -->
+<rect x="265" y="91" width="530" height="16" rx="8" fill="#0d2040"/>
+<!-- animated bar -->
+<rect x="265" y="91" width="503" height="16" rx="8" fill="url(#ljs)" class="lbar lb1"/>
+<!-- percent -->
+<text x="858" y="104" text-anchor="end" font-size="14" font-family="Consolas,monospace"
+      font-weight="700" fill="#ffd54f" class="lpct lp1">95%</text>
+
+<!-- ═══ Row 2 — TypeScript 90% ═══ -->
+<circle cx="48" cy="138" r="6" fill="#64b5f6" filter="url(#lg)" class="ldot" style="--e:.3s"/>
+<text x="64" y="143" font-size="15" font-family="Segoe UI,Arial,sans-serif"
+      font-weight="600" fill="#e2e8f0">🔵 TypeScript</text>
+<rect x="265" y="129" width="530" height="16" rx="8" fill="#0d2040"/>
+<rect x="265" y="129" width="477" height="16" rx="8" fill="url(#lts)" class="lbar lb2"/>
+<text x="858" y="142" text-anchor="end" font-size="14" font-family="Consolas,monospace"
+      font-weight="700" fill="#64b5f6" class="lpct lp2">90%</text>
+
+<!-- ═══ Row 3 — HTML 88% ═══ -->
+<circle cx="48" cy="176" r="6" fill="#ff8a65" filter="url(#lg)" class="ldot" style="--e:.6s"/>
+<text x="64" y="181" font-size="15" font-family="Segoe UI,Arial,sans-serif"
+      font-weight="600" fill="#e2e8f0">🔴 HTML</text>
+<rect x="265" y="167" width="530" height="16" rx="8" fill="#0d2040"/>
+<rect x="265" y="167" width="466" height="16" rx="8" fill="url(#lhtml)" class="lbar lb3"/>
+<text x="858" y="180" text-anchor="end" font-size="14" font-family="Consolas,monospace"
+      font-weight="700" fill="#ff8a65" class="lpct lp3">88%</text>
+
+<!-- ═══ Row 4 — CSS 85% ═══ -->
+<circle cx="48" cy="214" r="6" fill="#81d4fa" filter="url(#lg)" class="ldot" style="--e:.9s"/>
+<text x="64" y="219" font-size="15" font-family="Segoe UI,Arial,sans-serif"
+      font-weight="600" fill="#e2e8f0">💙 CSS</text>
+<rect x="265" y="205" width="530" height="16" rx="8" fill="#0d2040"/>
+<rect x="265" y="205" width="450" height="16" rx="8" fill="url(#lcss)" class="lbar lb4"/>
+<text x="858" y="218" text-anchor="end" font-size="14" font-family="Consolas,monospace"
+      font-weight="700" fill="#81d4fa" class="lpct lp4">85%</text>
+
+<!-- ═══ Row 5 — React 83% ═══ -->
+<circle cx="48" cy="252" r="6" fill="#80deea" filter="url(#lg)" class="ldot" style="--e:1.2s"/>
+<text x="64" y="257" font-size="15" font-family="Segoe UI,Arial,sans-serif"
+      font-weight="600" fill="#e2e8f0">⚛️ React</text>
+<rect x="265" y="243" width="530" height="16" rx="8" fill="#0d2040"/>
+<rect x="265" y="243" width="440" height="16" rx="8" fill="url(#lreact)" class="lbar lb5"/>
+<text x="858" y="256" text-anchor="end" font-size="14" font-family="Consolas,monospace"
+      font-weight="700" fill="#80deea" class="lpct lp5">83%</text>
+
+<!-- ═══ Row 6 — Node.js 92% ═══ -->
+<circle cx="48" cy="290" r="6" fill="#a5d6a7" filter="url(#lg)" class="ldot" style="--e:1.5s"/>
+<text x="64" y="295" font-size="15" font-family="Segoe UI,Arial,sans-serif"
+      font-weight="600" fill="#e2e8f0">🟢 Node.js</text>
+<rect x="265" y="281" width="530" height="16" rx="8" fill="#0d2040"/>
+<rect x="265" y="281" width="488" height="16" rx="8" fill="url(#lnode)" class="lbar lb6"/>
+<text x="858" y="294" text-anchor="end" font-size="14" font-family="Consolas,monospace"
+      font-weight="700" fill="#a5d6a7" class="lpct lp6">92%</text>
+
+<!-- ═══ Row 7 — MongoDB 78% ═══ -->
+<circle cx="48" cy="328" r="6" fill="#c8e6c9" filter="url(#lg)" class="ldot" style="--e:1.8s"/>
+<text x="64" y="333" font-size="15" font-family="Segoe UI,Arial,sans-serif"
+      font-weight="600" fill="#e2e8f0">🍃 MongoDB</text>
+<rect x="265" y="319" width="530" height="16" rx="8" fill="#0d2040"/>
+<rect x="265" y="319" width="413" height="16" rx="8" fill="url(#lmongo)" class="lbar lb7"/>
+<text x="858" y="332" text-anchor="end" font-size="14" font-family="Consolas,monospace"
+      font-weight="700" fill="#c8e6c9" class="lpct lp7">78%</text>
+
+<!-- Bottom text -->
+<text x="450" y="386" text-anchor="middle" font-size="13"
+      font-family="Segoe UI,Arial,sans-serif" font-weight="700"
+      fill="#4a7aab" letter-spacing="2">KEEP CODING • KEEP GROWING 🚀</text>
+<rect x="330" y="395" width="240" height="1.5" rx="1" fill="url(#ltitle)"/>
+
+<!-- Status dots -->
+<circle cx="840" cy="26" r="3.5" fill="#00ff88" opacity=".9"/>
+<circle cx="854" cy="26" r="3.5" fill="#ffcc00" opacity=".8"/>
+<circle cx="868" cy="26" r="3.5" fill="#ff4d6a" opacity=".8"/>
 </svg>
