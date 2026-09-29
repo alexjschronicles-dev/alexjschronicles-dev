@@ -1,40 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
 <defs>
-  <!-- Gradients -->
+  <!-- Red, Black, White Gradients -->
   <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%"   stop-color="#040d1e"/>
-    <stop offset="50%"  stop-color="#071428"/>
-    <stop offset="100%" stop-color="#040d1e"/>
+    <stop offset="0%"   stop-color="#040404"/>
+    <stop offset="50%"  stop-color="#120506"/>
+    <stop offset="100%" stop-color="#070707"/>
   </linearGradient>
-  <linearGradient id="bar-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#00d4ff"/>
-    <stop offset="100%" stop-color="#0055ff"/>
+
+  <linearGradient id="card-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%"   stop-color="#ff1e42"/>
+    <stop offset="50%"  stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#ff1e42"/>
   </linearGradient>
-  <linearGradient id="bar-grad2" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#a855f7"/>
-    <stop offset="100%" stop-color="#6366f1"/>
-  </linearGradient>
-  <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#FFD700"/>
-    <stop offset="100%" stop-color="#FF9500"/>
-  </linearGradient>
-  <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#4fc3f7"/>
+
+  <linearGradient id="bar-red1" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#b71c1c"/>
+    <stop offset="70%"  stop-color="#ff1e42"/>
     <stop offset="100%" stop-color="#ffffff"/>
   </linearGradient>
+
+  <linearGradient id="bar-red2" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff1744"/>
+    <stop offset="100%" stop-color="#ff6b81"/>
+  </linearGradient>
+
+  <linearGradient id="bar-white" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff1e42"/>
+    <stop offset="50%"  stop-color="#ff4d6d"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+  </linearGradient>
+
+  <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff1e42"/>
+    <stop offset="60%"  stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#ff4d6d"/>
+  </linearGradient>
+
   <linearGradient id="ring-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%"   stop-color="#00d4ff"/>
-    <stop offset="100%" stop-color="#7b2fff"/>
-  </linearGradient>
-  <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%"   stop-color="#1a6fff"/>
-    <stop offset="50%"  stop-color="#00d4ff"/>
-    <stop offset="100%" stop-color="#1a6fff"/>
-  </linearGradient>
-  <linearGradient id="border-grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%"   stop-color="#7b2fff"/>
-    <stop offset="50%"  stop-color="#00d4ff"/>
-    <stop offset="100%" stop-color="#7b2fff"/>
+    <stop offset="0%"   stop-color="#ff1e42"/>
+    <stop offset="60%"  stop-color="#ff4d6d"/>
+    <stop offset="100%" stop-color="#ffffff"/>
   </linearGradient>
 
   <!-- Filters -->
@@ -42,16 +47,14 @@
     <feGaussianBlur stdDeviation="4" result="blur"/>
     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
+
   <filter id="softglow" x="-30%" y="-80%" width="160%" height="260%">
-    <feGaussianBlur stdDeviation="9" result="blur"/>
+    <feGaussianBlur stdDeviation="8" result="blur"/>
     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
+
   <filter id="ring-glow" x="-20%" y="-20%" width="140%" height="140%">
     <feGaussianBlur stdDeviation="6" result="blur"/>
-    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="title-glow" x="-10%" y="-80%" width="120%" height="360%">
-    <feGaussianBlur stdDeviation="5" result="blur"/>
     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
 
@@ -62,79 +65,79 @@
 </defs>
 
 <style>
-/* ── Stars ── */
+/* Stars */
 .star { animation: twinkle var(--d,3s) var(--del,0s) infinite ease-in-out; }
-@keyframes twinkle { 0%,100%{opacity:.15} 50%{opacity:.9} }
+@keyframes twinkle { 0%,100%{opacity:.15} 50%{opacity:.95} }
 
-/* ── Shimmer sweep ── */
+/* Shimmer sweep */
 .shimmer { animation: sweep 7s 1.5s infinite linear; }
 @keyframes sweep { from{transform:translateX(-350px) rotate(-20deg)} to{transform:translateX(1300px) rotate(-20deg)} }
 
-/* ── Scan line ── */
-.scan { animation: scan-move 5s 2s infinite linear; opacity:.18; }
+/* Scan line */
+.scan { animation: scan-move 5s 2s infinite linear; opacity:.25; }
 @keyframes scan-move { 0%{transform:translateY(-10px)} 100%{transform:translateY(430px)} }
 
-/* ── Border pulse ── */
+/* Border pulse */
 .border-pulse { animation: border-anim 4s infinite alternate; }
-@keyframes border-anim { from{stroke:#1a6fff} to{stroke:#00d4ff} }
+@keyframes border-anim { from{stroke:#ff1e42} to{stroke:#ffffff} }
 
-/* ── Row slide-in ── */
+/* Row slide-in */
 .row { opacity:0; transform:translateX(-45px); animation: row-in .7s forwards ease-out; }
 .r1{animation-delay:.3s} .r2{animation-delay:.55s} .r3{animation-delay:.8s} .r4{animation-delay:1.05s} .r5{animation-delay:1.3s}
 @keyframes row-in { to{opacity:1;transform:translateX(0)} }
 
-/* ── Bar fill ── */
+/* Bar fill */
 .bar { transform:scaleX(0); transform-origin:left; animation: grow-bar 1.6s forwards cubic-bezier(.2,.6,.4,1); }
 .b1{animation-delay:.5s} .b2{animation-delay:.75s} .b3{animation-delay:1s} .b4{animation-delay:1.25s} .b5{animation-delay:1.5s}
 @keyframes grow-bar { to{transform:scaleX(1)} }
 
-/* ── Rank reveal ── */
+/* Rank reveal */
 .rank-text { opacity:0; animation: fade-in .8s 1.2s forwards; }
 @keyframes fade-in { to{opacity:1} }
 
-/* ── Ring animation ── */
+/* Ring animation */
 .ring-arc { stroke-dasharray:565; stroke-dashoffset:565; animation: ring-fill 2.2s .4s forwards cubic-bezier(.4,0,.2,1); }
 @keyframes ring-fill { to{stroke-dashoffset:113} }
 
-/* ── Dot pulse ── */
+/* Dot pulse */
 .live-dot { animation: live-pulse 1.5s infinite ease-in-out; }
 @keyframes live-pulse { 0%,100%{r:4;opacity:1} 50%{r:6.5;opacity:.5} }
 
-/* ── Corner brackets ── */
+/* Corner brackets */
 .bracket { animation: bracket-pulse 3s infinite ease-in-out; }
 @keyframes bracket-pulse { 0%,100%{opacity:.6} 50%{opacity:1} }
 
-/* ── Orbit dots ── */
-.orbit { animation: orbit-spin var(--od,6s) linear infinite; transform-origin:175px 230px; }
+/* Orbit dots */
+.orbit { animation: orbit-spin var(--od,6s) linear infinite; transform-origin:175px 238px; }
 @keyframes orbit-spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
 </style>
 
-<!-- ░░ Background ░░ -->
+<!-- Background -->
 <rect width="900" height="420" rx="22" fill="url(#bg-grad)"/>
 
-<!-- Star particles -->
-<circle class="star" cx="820" cy="30"  r="1.5" fill="#4fc3f7" style="--d:2.1s;--del:.3s"/>
+<!-- Star particles in Red & White -->
+<circle class="star" cx="820" cy="30"  r="1.5" fill="#ff1e42" style="--d:2.1s;--del:.3s"/>
 <circle class="star" cx="750" cy="15"  r="1"   fill="#ffffff" style="--d:3.4s;--del:.8s"/>
-<circle class="star" cx="860" cy="70"  r="1"   fill="#7b2fff" style="--d:2.8s;--del:0s"/>
-<circle class="star" cx="690" cy="40"  r="1.5" fill="#00d4ff" style="--d:4.1s;--del:1.2s"/>
-<circle class="star" cx="880" cy="130" r="1"   fill="#ffffff" style="--d:3.0s;--del:.5s"/>
-<circle class="star" cx="830" cy="180" r="1.5" fill="#4fc3f7" style="--d:2.5s;--del:1.8s"/>
-<circle class="star" cx="760" cy="90"  r="1"   fill="#ffffff" style="--d:3.7s;--del:.2s"/>
-<circle class="star" cx="700" cy="380" r="1"   fill="#00d4ff" style="--d:2.9s;--del:2.1s"/>
+<circle class="star" cx="860" cy="70"  r="1"   fill="#ff4d6d" style="--d:2.8s;--del:0s"/>
+<circle class="star" cx="690" cy="40"  r="1.5" fill="#ffffff" style="--d:4.1s;--del:1.2s"/>
+<circle class="star" cx="880" cy="130" r="1"   fill="#ff1e42" style="--d:3.0s;--del:.5s"/>
+<circle class="star" cx="830" cy="180" r="1.5" fill="#ffffff" style="--d:2.5s;--del:1.8s"/>
+<circle class="star" cx="760" cy="90"  r="1"   fill="#ff4d6d" style="--d:3.7s;--del:.2s"/>
+<circle class="star" cx="700" cy="380" r="1"   fill="#ffffff" style="--d:2.9s;--del:2.1s"/>
 <circle class="star" cx="50"  cy="20"  r="1"   fill="#ffffff" style="--d:4.3s;--del:.7s"/>
-<circle class="star" cx="80"  cy="50"  r="1.5" fill="#4fc3f7" style="--d:2.2s;--del:1.5s"/>
+<circle class="star" cx="80"  cy="50"  r="1.5" fill="#ff1e42" style="--d:2.2s;--del:1.5s"/>
 <circle class="star" cx="30"  cy="100" r="1"   fill="#ffffff" style="--d:3.6s;--del:.4s"/>
-<circle class="star" cx="120" cy="390" r="1"   fill="#7b2fff" style="--d:2.7s;--del:1.0s"/>
+<circle class="star" cx="120" cy="390" r="1"   fill="#ff1e42" style="--d:2.7s;--del:1.0s"/>
 <circle class="star" cx="300" cy="20"  r="1"   fill="#ffffff" style="--d:3.2s;--del:.9s"/>
-<circle class="star" cx="500" cy="10"  r="1.5" fill="#4fc3f7" style="--d:4.5s;--del:.1s"/>
+<circle class="star" cx="500" cy="10"  r="1.5" fill="#ff4d6d" style="--d:4.5s;--del:.1s"/>
 <circle class="star" cx="600" cy="400" r="1"   fill="#ffffff" style="--d:2.4s;--del:2.3s"/>
 
-<!-- ░░ Card border glow layer ░░ -->
+<!-- Card border glow layer -->
 <rect x="8" y="8" width="884" height="404" rx="22" fill="none"
-      stroke="url(#border-grad)" stroke-width="1.5" opacity=".5" class="border-pulse"/>
+      stroke="url(#card-border-grad)" stroke-width="1.5" opacity=".5" class="border-pulse"/>
 
-<!-- ░░ Card ░░ -->
-<rect x="10" y="10" width="880" height="400" rx="20" fill="#0a1628"/>
+<!-- Card Interior (Obsidian Black) -->
+<rect x="10" y="10" width="880" height="400" rx="20" fill="#0b0b0c"/>
 
 <!-- Shimmer sweep -->
 <g clip-path="url(#card-clip)">
@@ -142,106 +145,99 @@
         fill="white" opacity=".04" transform="rotate(-20)"/>
 </g>
 
-<!-- Scan line -->
+<!-- Scan line in Crimson Red -->
 <g clip-path="url(#card-clip)">
   <rect class="scan" x="10" y="0" width="880" height="2"
-        fill="url(#bar-grad)"/>
+        fill="#ff1e42"/>
 </g>
 
-<!-- ░░ Corner bracket decorations ░░ -->
-<!-- TL -->
-<path class="bracket" d="M28,28 L28,48 M28,28 L48,28" fill="none" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
-<!-- TR -->
-<path class="bracket" d="M872,28 L872,48 M872,28 L852,28" fill="none" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
-<!-- BL -->
-<path class="bracket" d="M28,392 L28,372 M28,392 L48,392" fill="none" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
-<!-- BR -->
-<path class="bracket" d="M872,392 L872,372 M872,392 L852,392" fill="none" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/>
+<!-- Corner bracket decorations in Red -->
+<path class="bracket" d="M28,28 L28,48 M28,28 L48,28" fill="none" stroke="#ff1e42" stroke-width="2.5" stroke-linecap="round"/>
+<path class="bracket" d="M872,28 L872,48 M872,28 L852,28" fill="none" stroke="#ff1e42" stroke-width="2.5" stroke-linecap="round"/>
+<path class="bracket" d="M28,392 L28,372 M28,392 L48,392" fill="none" stroke="#ff1e42" stroke-width="2.5" stroke-linecap="round"/>
+<path class="bracket" d="M872,392 L872,372 M872,392 L852,392" fill="none" stroke="#ff1e42" stroke-width="2.5" stroke-linecap="round"/>
 
-<!-- ░░ Title ░░ -->
+<!-- Title -->
 <text x="42" y="56" font-size="30" font-family="Segoe UI,Arial,sans-serif" font-weight="bold"
-      fill="url(#title-grad)" filter="url(#title-glow)">GitHub Statistics</text>
-<text x="44" y="76" font-size="13" font-family="Segoe UI,Arial,sans-serif" fill="#4a7aab">alexjschronicles-dev</text>
+      fill="url(#title-grad)" filter="url(#glow)">GitHub Statistics</text>
+<text x="44" y="76" font-size="13" font-family="Segoe UI,Arial,sans-serif" fill="#9e9e9e">alexjschronicles-dev</text>
 
-<!-- Live dot -->
-<circle class="live-dot" cx="310" cy="51" r="4" fill="#00ff88"/>
-<text x="320" y="56" font-size="12" font-family="Segoe UI,Arial,sans-serif" fill="#00ff88">LIVE</text>
+<!-- Live dot in bright red -->
+<circle class="live-dot" cx="310" cy="51" r="4" fill="#ff1e42"/>
+<text x="320" y="56" font-size="12" font-family="Segoe UI,Arial,sans-serif" font-weight="bold" fill="#ff1e42">LIVE</text>
 
 <!-- ░░ RANK RING (left side) ░░ -->
-<!-- Outer glow ring (static track) -->
-<circle cx="175" cy="238" r="90" fill="none" stroke="#0d2847" stroke-width="18"/>
-<!-- Animated arc -->
+<circle cx="175" cy="238" r="90" fill="none" stroke="#1f0a0d" stroke-width="18"/>
 <circle cx="175" cy="238" r="90" fill="none"
         stroke="url(#ring-grad)" stroke-width="18" stroke-linecap="round"
         class="ring-arc"
         transform="rotate(-90 175 238)"
         filter="url(#ring-glow)"/>
-<!-- Inner decorative ring -->
-<circle cx="175" cy="238" r="68" fill="none" stroke="#0d2847" stroke-width="1.5"/>
-<circle cx="175" cy="238" r="68" fill="none" stroke="#1a4d8a" stroke-width=".5"/>
+<circle cx="175" cy="238" r="68" fill="none" stroke="#2a0d11" stroke-width="1.5"/>
+
 <!-- Rank text -->
-<text x="175" y="222" text-anchor="middle" font-size="20" font-family="Segoe UI,Arial" fill="#4a7aab"
+<text x="175" y="222" text-anchor="middle" font-size="20" font-family="Segoe UI,Arial" font-weight="700" fill="#9e9e9e"
       class="rank-text">RANK</text>
 <text x="175" y="270" text-anchor="middle" font-size="62" font-family="Segoe UI,Arial" font-weight="bold"
-      fill="url(#gold-grad)" filter="url(#softglow)" class="rank-text">A+</text>
+      fill="#ffffff" filter="url(#softglow)" class="rank-text">A+</text>
 
-<!-- Orbit dots -->
+<!-- Orbit dots (Red & White) -->
 <g class="orbit" style="--od:8s">
-  <circle cx="265" cy="238" r="4" fill="#00d4ff" filter="url(#glow)"/>
+  <circle cx="265" cy="238" r="4" fill="#ff1e42" filter="url(#glow)"/>
 </g>
 <g class="orbit" style="--od:12s">
-  <circle cx="175" cy="148" r="3" fill="#7b2fff" filter="url(#glow)"/>
+  <circle cx="175" cy="148" r="3" fill="#ffffff" filter="url(#glow)"/>
 </g>
 
 <!-- ░░ Stats section (right side) ░░ -->
 
 <!-- Repos -->
 <g class="row r1">
-  <text x="310" y="110" font-size="19" font-family="Segoe UI,Arial" fill="#8fcfff">Repositories</text>
+  <text x="310" y="110" font-size="19" font-family="Segoe UI,Arial" font-weight="600" fill="#f5f5f5">Repositories</text>
   <text x="840" y="110" text-anchor="end" font-size="20" font-family="Consolas,monospace" font-weight="bold" fill="#ffffff">25+</text>
-  <rect x="310" y="118" width="530" height="12" rx="6" fill="#0d2040"/>
-  <rect x="310" y="118" width="451" height="12" rx="6" fill="url(#bar-grad)" class="bar b1"/>
+  <rect x="310" y="118" width="530" height="12" rx="6" fill="#1f0d10"/>
+  <rect x="310" y="118" width="451" height="12" rx="6" fill="url(#bar-red1)" class="bar b1"/>
 </g>
 
 <!-- Discord Bots -->
 <g class="row r2">
-  <text x="310" y="168" font-size="19" font-family="Segoe UI,Arial" fill="#8fcfff">Discord Bots</text>
+  <text x="310" y="168" font-size="19" font-family="Segoe UI,Arial" font-weight="600" fill="#f5f5f5">Discord Bots</text>
   <text x="840" y="168" text-anchor="end" font-size="20" font-family="Consolas,monospace" font-weight="bold" fill="#ffffff">15+</text>
-  <rect x="310" y="176" width="530" height="12" rx="6" fill="#0d2040"/>
-  <rect x="310" y="176" width="477" height="12" rx="6" fill="url(#bar-grad2)" class="bar b2"/>
+  <rect x="310" y="176" width="530" height="12" rx="6" fill="#1f0d10"/>
+  <rect x="310" y="176" width="477" height="12" rx="6" fill="url(#bar-red2)" class="bar b2"/>
 </g>
 
 <!-- Frontend Projects -->
 <g class="row r3">
-  <text x="310" y="226" font-size="19" font-family="Segoe UI,Arial" fill="#8fcfff">Frontend Projects</text>
+  <text x="310" y="226" font-size="19" font-family="Segoe UI,Arial" font-weight="600" fill="#f5f5f5">Frontend Projects</text>
   <text x="840" y="226" text-anchor="end" font-size="20" font-family="Consolas,monospace" font-weight="bold" fill="#ffffff">12+</text>
-  <rect x="310" y="234" width="530" height="12" rx="6" fill="#0d2040"/>
-  <rect x="310" y="234" width="413" height="12" rx="6" fill="url(#bar-grad)" class="bar b3"/>
+  <rect x="310" y="234" width="530" height="12" rx="6" fill="#1f0d10"/>
+  <rect x="310" y="234" width="413" height="12" rx="6" fill="url(#bar-white)" class="bar b3"/>
 </g>
 
 <!-- Open Source -->
 <g class="row r4">
-  <text x="310" y="284" font-size="19" font-family="Segoe UI,Arial" fill="#8fcfff">Open Source</text>
+  <text x="310" y="284" font-size="19" font-family="Segoe UI,Arial" font-weight="600" fill="#f5f5f5">Open Source</text>
   <text x="840" y="284" text-anchor="end" font-size="20" font-family="Consolas,monospace" font-weight="bold" fill="#ffffff">Growing</text>
-  <rect x="310" y="292" width="530" height="12" rx="6" fill="#0d2040"/>
-  <rect x="310" y="292" width="345" height="12" rx="6" fill="url(#bar-grad2)" class="bar b4"/>
+  <rect x="310" y="292" width="530" height="12" rx="6" fill="#1f0d10"/>
+  <rect x="310" y="292" width="345" height="12" rx="6" fill="url(#bar-red2)" class="bar b4"/>
 </g>
 
 <!-- Coding Passion -->
 <g class="row r5">
-  <text x="310" y="342" font-size="19" font-family="Segoe UI,Arial" fill="#8fcfff">Coding Passion</text>
-  <text x="840" y="342" text-anchor="end" font-size="20" font-family="Consolas,monospace" font-weight="bold" fill="url(#gold-grad)">100%</text>
-  <rect x="310" y="350" width="530" height="12" rx="6" fill="#0d2040"/>
-  <rect x="310" y="350" width="530" height="12" rx="6" fill="url(#gold-grad)" class="bar b5" filter="url(#glow)"/>
+  <text x="310" y="342" font-size="19" font-family="Segoe UI,Arial" font-weight="600" fill="#f5f5f5">Coding Passion</text>
+  <text x="840" y="342" text-anchor="end" font-size="20" font-family="Consolas,monospace" font-weight="bold" fill="#ff1e42">100%</text>
+  <rect x="310" y="350" width="530" height="12" rx="6" fill="#1f0d10"/>
+  <rect x="310" y="350" width="530" height="12" rx="6" fill="url(#bar-red1)" class="bar b5" filter="url(#glow)"/>
 </g>
 
 <!-- ░░ Bottom badge ░░ -->
 <text x="450" y="402" text-anchor="middle" font-size="12"
-      font-family="Segoe UI,Arial" fill="#2a4a7a" letter-spacing="2">CHRONICLES COMMUNITY</text>
+      font-family="Segoe UI,Arial" font-weight="700" fill="#888888" letter-spacing="3">CHRONICLES COMMUNITY</text>
 
-<!-- 3 indicator dots top-right -->
-<circle cx="840" cy="26" r="3.5" fill="#00ff88" opacity=".9"/>
-<circle cx="855" cy="26" r="3.5" fill="#ffcc00" opacity=".8"/>
-<circle cx="870" cy="26" r="3.5" fill="#ff4d6a" opacity=".8"/>
+<!-- 3 indicator dots top-right: White, Pink-Red, Scarlet Red -->
+<circle cx="840" cy="26" r="3.5" fill="#ffffff" opacity=".9"/>
+<circle cx="855" cy="26" r="3.5" fill="#ff4d6d" opacity=".85"/>
+<circle cx="870" cy="26" r="3.5" fill="#ff1e42" opacity=".95"/>
 
 </svg>
