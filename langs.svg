@@ -1,301 +1,214 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="900"
-     height="420"
-     viewBox="0 0 900 420">
-
-<style>
-
-.bg{
-fill:#08111d;
-}
-
-.card{
-fill:#0d1726;
-stroke:#33b5ff;
-stroke-width:2;
-rx:24;
-}
-
-.title{
-font-size:34px;
-font-family:Segoe UI,Arial,sans-serif;
-font-weight:bold;
-fill:#8fe3ff;
-}
-
-.lang{
-fill:#ffffff;
-font-size:22px;
-font-family:Segoe UI,Arial,sans-serif;
-}
-
-.percent{
-fill:#80d8ff;
-font-size:20px;
-font-family:Consolas,monospace;
-}
-
-.bar-bg{
-fill:#19314e;
-rx:10;
-}
-
-.bar{
-rx:10;
-filter:url(#glow);
-transform-origin:left;
-transform:scaleX(0);
-animation:grow 1.8s forwards;
-}
-
-.bar1{animation-delay:.2s;}
-.bar2{animation-delay:.5s;}
-.bar3{animation-delay:.8s;}
-.bar4{animation-delay:1.1s;}
-.bar5{animation-delay:1.4s;}
-.bar6{animation-delay:1.7s;}
-.bar7{animation-delay:2s;}
-
-.row{
-opacity:0;
-transform:translateX(-30px);
-animation:slide .8s forwards;
-}
-
-.r1{animation-delay:.1s;}
-.r2{animation-delay:.4s;}
-.r3{animation-delay:.7s;}
-.r4{animation-delay:1s;}
-.r5{animation-delay:1.3s;}
-.r6{animation-delay:1.6s;}
-.r7{animation-delay:1.9s;}
-
-.spark{
-animation:blink 2.5s infinite;
-}
-
-@keyframes grow{
-to{
-transform:scaleX(1);
-}
-}
-
-@keyframes slide{
-to{
-opacity:1;
-transform:translateX(0);
-}
-}
-
-@keyframes blink{
-50%{
-opacity:.2;
-}
-}
-
-</style>
-
-<defs>
-
-<linearGradient id="js">
-<stop offset="0%" stop-color="#ffd54f"/>
-<stop offset="100%" stop-color="#ffb300"/>
-</linearGradient>
-
-<linearGradient id="ts">
-<stop offset="0%" stop-color="#64b5f6"/>
-<stop offset="100%" stop-color="#1976d2"/>
-</linearGradient>
-
-<linearGradient id="html">
-<stop offset="0%" stop-color="#ff8a65"/>
-<stop offset="100%" stop-color="#f4511e"/>
-</linearGradient>
-
-<linearGradient id="css">
-<stop offset="0%" stop-color="#81d4fa"/>
-<stop offset="100%" stop-color="#039be5"/>
-</linearGradient>
-
-<linearGradient id="react">
-<stop offset="0%" stop-color="#80deea"/>
-<stop offset="100%" stop-color="#26c6da"/>
-</linearGradient>
-
-<linearGradient id="node">
-<stop offset="0%" stop-color="#81c784"/>
-<stop offset="100%" stop-color="#43a047"/>
-</linearGradient>
-
-<linearGradient id="sql">
-<stop offset="0%" stop-color="#90caf9"/>
-<stop offset="100%" stop-color="#1565c0"/>
-</linearGradient>
-
-<filter id="glow">
-<feGaussianBlur stdDeviation="4"/>
-</filter>
-
-</defs>
-
-<rect width="900" height="420" rx="24" class="bg"/>
-
-<rect x="10"
-      y="10"
-      width="880"
-      height="400"
-      class="card"/>
-
-<text x="40"
-      y="55"
-      class="title">
-Most Used Languages
-</text>
-
-<g class="row r1">
-
-<text x="40" y="105" class="lang">JavaScript</text>
-
-<text x="820" y="105" class="percent">95%</text>
-
-<rect x="220" y="88"
-      width="560"
-      height="18"
-      class="bar-bg"/>
-
-<rect x="220"
-      y="88"
-      width="532"
-      height="18"
-      fill="url(#js)"
-      class="bar bar1"/>
-
-</g>
-
-<g class="row r2">
-
-<text x="40" y="150" class="lang">TypeScript</text>
-
-<text x="820" y="150" class="percent">90%</text>
-
-<rect x="220" y="133"
-      width="560"
-      height="18"
-      class="bar-bg"/>
-
-<rect x="220"
-      y="133"
-      width="504"
-      height="18"
-      fill="url(#ts)"
-      class="bar bar2"/>
-
-</g>
-
-<g class="row r3">
-
-<text x="40" y="195" class="lang">HTML</text>
-
-<text x="820" y="195" class="percent">95%</text>
-
-<rect x="220" y="178"
-      width="560"
-      height="18"
-      class="bar-bg"/>
-
-<rect x="220"
-      y="178"
-      width="532"
-      height="18"
-      fill="url(#html)"
-      class="bar bar3"/>
-
-</g>
-
-<g class="row r4">
-
-<text x="40" y="240" class="lang">CSS</text>
-
-<text x="820" y="240" class="percent">92%</text>
-
-<rect x="220" y="223"
-      width="560"
-      height="18"
-      class="bar-bg"/>
-
-<rect x="220"
-      y="223"
-      width="515"
-      height="18"
-      fill="url(#css)"
-      class="bar bar4"/>
-
-</g>
-
-<g class="row r5">
-
-<text x="40" y="285" class="lang">React</text>
-
-<text x="820" y="285" class="percent">85%</text>
-
-<rect x="220" y="268"
-      width="560"
-      height="18"
-      class="bar-bg"/>
-
-<rect x="220"
-      y="268"
-      width="476"
-      height="18"
-      fill="url(#react)"
-      class="bar bar5"/>
-
-</g>
-
-<g class="row r6">
-
-<text x="40" y="330" class="lang">Node.js</text>
-
-<text x="820" y="330" class="percent">94%</text>
-
-<rect x="220" y="313"
-      width="560"
-      height="18"
-      class="bar-bg"/>
-
-<rect x="220"
-      y="313"
-      width="526"
-      height="18"
-      fill="url(#node)"
-      class="bar bar6"/>
-
-</g>
-
-<g class="row r7">
-
-<text x="40" y="375" class="lang">SQL</text>
-
-<text x="820" y="375" class="percent">82%</text>
-
-<rect x="220" y="358"
-      width="560"
-      height="18"
-      class="bar-bg"/>
-
-<rect x="220"
-      y="358"
-      width="459"
-      height="18"
-      fill="url(#sql)"
-      class="bar bar7"/>
-
-</g>
-
-<circle cx="840" cy="45" r="3" fill="#6fdcff" class="spark"/>
-<circle cx="810" cy="80" r="2" fill="#6fdcff" class="spark"/>
-<circle cx="770" cy="55" r="2" fill="#6fdcff" class="spark"/>
-<circle cx="90" cy="380" r="2" fill="#6fdcff" class="spark"/>
-<circle cx="130" cy="395" r="3" fill="#6fdcff" class="spark"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+    <defs>
+        <filter id="glow-f" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <filter id="strong-glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="6" result="blur" />
+            <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        
+        <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00ffff" />
+            <stop offset="100%" stop-color="#ffffff" />
+        </linearGradient>
+        <linearGradient id="grad-js" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ffd54f"/><stop offset="100%" stop-color="#ff6f00"/></linearGradient>
+        <linearGradient id="grad-ts" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#64b5f6"/><stop offset="100%" stop-color="#1565c0"/></linearGradient>
+        <linearGradient id="grad-html" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#ff8a65"/><stop offset="100%" stop-color="#bf360c"/></linearGradient>
+        <linearGradient id="grad-css" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#81d4fa"/><stop offset="100%" stop-color="#0277bd"/></linearGradient>
+        <linearGradient id="grad-react" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#80deea"/><stop offset="100%" stop-color="#00838f"/></linearGradient>
+        <linearGradient id="grad-node" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#a5d6a7"/><stop offset="100%" stop-color="#2e7d32"/></linearGradient>
+        <linearGradient id="grad-mongo" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#a5d6a7"/><stop offset="100%" stop-color="#558b2f"/></linearGradient>
+        
+        <linearGradient id="shimmer-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+            <stop offset="50%" stop-color="#00ffff" stop-opacity="0.3" />
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+        </linearGradient>
+
+        <pattern id="hex-bg" width="30" height="51.96" patternUnits="userSpaceOnUse">
+            <path d="M15 0 L30 8.66 L30 25.98 L15 34.64 L0 25.98 L0 8.66 Z" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.05"/>
+            <path d="M15 51.96 L30 43.3 L30 25.98 L15 34.64 L0 25.98 L0 43.3 Z" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.05"/>
+        </pattern>
+        
+        <style>
+            .bg { fill: #060d1b; }
+            .card { fill: #080f1e; stroke: url(#title-grad); stroke-width: 1.5; stroke-opacity: 0.5; }
+            .title { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 26px; fill: url(#title-grad); }
+            .text { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 600; font-size: 15px; fill: #e2e8f0; }
+            .pct { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; fill: #ffffff; }
+            .bottom-text { font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 800; font-size: 13px; fill: #94a3b8; letter-spacing: 2px; text-anchor: middle; }
+            
+            @keyframes pulse {
+                0%, 100% { opacity: 1; transform: scale(1) translateY(0); }
+                50% { opacity: 0.6; transform: scale(0.9) translateY(2px); }
+            }
+            .bolt { animation: pulse 2s infinite ease-in-out; transform-origin: center; display: inline-block; }
+            
+            @keyframes twinkle {
+                0%, 100% { opacity: 0; transform: scale(0.5); }
+                50% { opacity: 1; transform: scale(1); }
+            }
+            .star1 { animation: twinkle 3s infinite ease-in-out; }
+            .star2 { animation: twinkle 4s infinite ease-in-out 1s; }
+            .star3 { animation: twinkle 2.5s infinite ease-in-out 0.5s; }
+            
+            @keyframes slideIn {
+                0% { opacity: 0; transform: translateX(-30px); }
+                100% { opacity: 1; transform: translateX(0); }
+            }
+            @keyframes scaleBar {
+                0% { transform: scaleX(0); }
+                100% { transform: scaleX(1); }
+            }
+            @keyframes slideDot {
+                0% { transform: translateX(0); opacity: 0; }
+                10% { opacity: 1; }
+                100% { transform: translateX(var(--target-x)); opacity: 1; }
+            }
+            .row { opacity: 0; animation: slideIn 0.6s forwards ease-out; }
+            .bar-fill { transform: scaleX(0); transform-origin: left; animation: scaleBar 1.8s forwards cubic-bezier(0.1, 0.8, 0.2, 1); }
+            .bar-dot { opacity: 0; animation: slideDot 1.8s forwards cubic-bezier(0.1, 0.8, 0.2, 1); }
+            
+            .row-1 { animation-delay: 0.2s; } .row-1 .bar-fill { animation-delay: 0.4s; } .row-1 .bar-dot { animation-delay: 0.4s; }
+            .row-2 { animation-delay: 0.4s; } .row-2 .bar-fill { animation-delay: 0.6s; } .row-2 .bar-dot { animation-delay: 0.6s; }
+            .row-3 { animation-delay: 0.6s; } .row-3 .bar-fill { animation-delay: 0.8s; } .row-3 .bar-dot { animation-delay: 0.8s; }
+            .row-4 { animation-delay: 0.8s; } .row-4 .bar-fill { animation-delay: 1.0s; } .row-4 .bar-dot { animation-delay: 1.0s; }
+            .row-5 { animation-delay: 1.0s; } .row-5 .bar-fill { animation-delay: 1.2s; } .row-5 .bar-dot { animation-delay: 1.2s; }
+            .row-6 { animation-delay: 1.2s; } .row-6 .bar-fill { animation-delay: 1.4s; } .row-6 .bar-dot { animation-delay: 1.4s; }
+            .row-7 { animation-delay: 1.4s; } .row-7 .bar-fill { animation-delay: 1.6s; } .row-7 .bar-dot { animation-delay: 1.6s; }
+
+            @keyframes sweep {
+                0% { transform: translateX(-100%); }
+                100% { transform: translateX(200%); }
+            }
+            .shimmer {
+                fill: url(#shimmer-grad);
+                animation: sweep 4s infinite linear;
+            }
+            
+            .underline {
+                transform-origin: center;
+                animation: scaleBar 1.5s forwards ease-out 2s;
+                transform: scaleX(0);
+            }
+        </style>
+        <clipPath id="clip-card"><rect width="880" height="400" x="10" y="10" rx="24"/></clipPath>
+    </defs>
+    
+    <rect width="900" height="420" class="bg" rx="24" />
+    <rect width="900" height="420" fill="url(#hex-bg)" />
+    
+    <g fill="#fff">
+        <circle cx="100" cy="80" r="1.5" class="star1" />
+        <circle cx="800" cy="50" r="1" class="star2" />
+        <circle cx="300" cy="350" r="2" class="star3" />
+        <circle cx="700" cy="200" r="1.5" class="star1" />
+        <circle cx="850" cy="300" r="2" class="star2" />
+        <circle cx="50" cy="250" r="1" class="star3" />
+        <circle cx="450" cy="100" r="1.5" class="star1" />
+        <circle cx="550" cy="380" r="1" class="star2" />
+        <circle cx="200" cy="20" r="2" class="star3" />
+        <circle cx="150" cy="300" r="1.5" class="star1" />
+        <circle cx="650" cy="80" r="1" class="star2" />
+        <circle cx="80" cy="150" r="2" class="star3" />
+        <circle cx="750" cy="380" r="1.5" class="star1" />
+        <circle cx="350" cy="50" r="1" class="star2" />
+        <circle cx="400" cy="250" r="2" class="star3" />
+    </g>
+
+    <rect x="10" y="10" width="880" height="400" rx="24" class="card" filter="url(#glow-f)"/>
+    <g style="clip-path: url(#clip-card);">
+        <rect x="0" y="0" width="400" height="1000" class="shimmer" transform="skewX(-45)" />
+    </g>
+
+    <path d="M 30 50 L 30 30 L 50 30" fill="none" stroke="#00ffff" stroke-width="4" filter="url(#strong-glow)"/>
+    <path d="M 870 50 L 870 30 L 850 30" fill="none" stroke="#00ffff" stroke-width="4" filter="url(#strong-glow)"/>
+    <path d="M 30 370 L 30 390 L 50 390" fill="none" stroke="#00ffff" stroke-width="4" filter="url(#strong-glow)"/>
+    <path d="M 870 370 L 870 390 L 850 390" fill="none" stroke="#00ffff" stroke-width="4" filter="url(#strong-glow)"/>
+
+    <text x="40" y="55" class="title">
+        <tspan class="bolt">⚡</tspan> Most Used Languages
+    </text>
+    <line x1="40" y1="75" x2="860" y2="75" stroke="#1e293b" stroke-width="2" />
+
+    <!-- 1. JS 95% = 503.5px -->
+    <g class="row row-1" transform="translate(0, 105)">
+        <circle cx="46" cy="7" r="6" fill="#ffd54f" filter="url(#glow-f)"/>
+        <text x="65" y="12" class="text">🟡 JavaScript</text>
+        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
+        <rect x="260" y="0" width="503.5" height="16" rx="8" fill="url(#grad-js)" class="bar-fill"/>
+        <g class="bar-dot" style="--target-x: 753.5px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
+        <text x="830" y="13" class="pct">95%</text>
+    </g>
+
+    <!-- 2. TS 90% = 477px -->
+    <g class="row row-2" transform="translate(0, 145)">
+        <circle cx="46" cy="7" r="6" fill="#64b5f6" filter="url(#glow-f)"/>
+        <text x="65" y="12" class="text">🔵 TypeScript</text>
+        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
+        <rect x="260" y="0" width="477" height="16" rx="8" fill="url(#grad-ts)" class="bar-fill"/>
+        <g class="bar-dot" style="--target-x: 727px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
+        <text x="830" y="13" class="pct">90%</text>
+    </g>
+
+    <!-- 3. HTML 88% = 466.4px -->
+    <g class="row row-3" transform="translate(0, 185)">
+        <circle cx="46" cy="7" r="6" fill="#ff8a65" filter="url(#glow-f)"/>
+        <text x="65" y="12" class="text">🔴 HTML</text>
+        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
+        <rect x="260" y="0" width="466.4" height="16" rx="8" fill="url(#grad-html)" class="bar-fill"/>
+        <g class="bar-dot" style="--target-x: 716.4px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
+        <text x="830" y="13" class="pct">88%</text>
+    </g>
+
+    <!-- 4. CSS 85% = 450.5px -->
+    <g class="row row-4" transform="translate(0, 225)">
+        <circle cx="46" cy="7" r="6" fill="#81d4fa" filter="url(#glow-f)"/>
+        <text x="65" y="12" class="text">💙 CSS</text>
+        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
+        <rect x="260" y="0" width="450.5" height="16" rx="8" fill="url(#grad-css)" class="bar-fill"/>
+        <g class="bar-dot" style="--target-x: 700.5px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
+        <text x="830" y="13" class="pct">85%</text>
+    </g>
+
+    <!-- 5. React 83% = 439.9px -->
+    <g class="row row-5" transform="translate(0, 265)">
+        <circle cx="46" cy="7" r="6" fill="#80deea" filter="url(#glow-f)"/>
+        <text x="65" y="12" class="text">🩵 React</text>
+        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
+        <rect x="260" y="0" width="439.9" height="16" rx="8" fill="url(#grad-react)" class="bar-fill"/>
+        <g class="bar-dot" style="--target-x: 689.9px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
+        <text x="830" y="13" class="pct">83%</text>
+    </g>
+
+    <!-- 6. Node.js 92% = 487.6px -->
+    <g class="row row-6" transform="translate(0, 305)">
+        <circle cx="46" cy="7" r="6" fill="#a5d6a7" filter="url(#glow-f)"/>
+        <text x="65" y="12" class="text">🟢 Node.js</text>
+        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
+        <rect x="260" y="0" width="487.6" height="16" rx="8" fill="url(#grad-node)" class="bar-fill"/>
+        <g class="bar-dot" style="--target-x: 737.6px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
+        <text x="830" y="13" class="pct">92%</text>
+    </g>
+
+    <!-- 7. MongoDB 78% = 413.4px -->
+    <g class="row row-7" transform="translate(0, 345)">
+        <circle cx="46" cy="7" r="6" fill="#a5d6a7" filter="url(#glow-f)"/>
+        <text x="65" y="12" class="text">🍃 MongoDB</text>
+        <rect x="260" y="0" width="530" height="16" rx="8" fill="#0d2040"/>
+        <rect x="260" y="0" width="413.4" height="16" rx="8" fill="url(#grad-mongo)" class="bar-fill"/>
+        <g class="bar-dot" style="--target-x: 663.4px;"><circle cx="0" cy="8" r="4" fill="#ffffff" filter="url(#strong-glow)"/></g>
+        <text x="830" y="13" class="pct">78%</text>
+    </g>
+
+    <text x="450" y="390" class="bottom-text">KEEP CODING • KEEP GROWING 🚀</text>
+    <rect x="350" y="400" width="200" height="2" fill="url(#title-grad)" class="underline" rx="1"/>
 </svg>
