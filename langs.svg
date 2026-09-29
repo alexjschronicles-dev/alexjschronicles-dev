@@ -1,42 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
 <defs>
+  <!-- Red, Black, White Gradients -->
   <linearGradient id="lbg" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%"   stop-color="#060d1b"/>
-    <stop offset="100%" stop-color="#080f1e"/>
-  </linearGradient>
-  <linearGradient id="ltitle" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#00ffff"/>
-    <stop offset="100%" stop-color="#ffffff"/>
-  </linearGradient>
-  <linearGradient id="ljs" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#ffd54f"/>
-    <stop offset="100%" stop-color="#ff6f00"/>
-  </linearGradient>
-  <linearGradient id="lts" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#64b5f6"/>
-    <stop offset="100%" stop-color="#1565c0"/>
-  </linearGradient>
-  <linearGradient id="lhtml" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#ff8a65"/>
-    <stop offset="100%" stop-color="#bf360c"/>
-  </linearGradient>
-  <linearGradient id="lcss" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#81d4fa"/>
-    <stop offset="100%" stop-color="#0277bd"/>
-  </linearGradient>
-  <linearGradient id="lreact" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#80deea"/>
-    <stop offset="100%" stop-color="#00838f"/>
-  </linearGradient>
-  <linearGradient id="lnode" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#a5d6a7"/>
-    <stop offset="100%" stop-color="#2e7d32"/>
-  </linearGradient>
-  <linearGradient id="lmongo" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%"   stop-color="#c8e6c9"/>
-    <stop offset="100%" stop-color="#558b2f"/>
+    <stop offset="0%"   stop-color="#040404"/>
+    <stop offset="50%"  stop-color="#120506"/>
+    <stop offset="100%" stop-color="#080808"/>
   </linearGradient>
 
+  <linearGradient id="ltitle" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff1e42"/>
+    <stop offset="50%"  stop-color="#ffffff"/>
+    <stop offset="100%" stop-color="#ff4d6d"/>
+  </linearGradient>
+
+  <!-- Unique Red/White Gradients for each language -->
+  <linearGradient id="ljs" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff1744"/>
+    <stop offset="100%" stop-color="#ff5252"/>
+  </linearGradient>
+
+  <linearGradient id="lts" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#e0e0e0"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+  </linearGradient>
+
+  <linearGradient id="lhtml" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#d50000"/>
+    <stop offset="100%" stop-color="#ff1744"/>
+  </linearGradient>
+
+  <linearGradient id="lcss" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff3366"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+  </linearGradient>
+
+  <linearGradient id="lreact" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff1e42"/>
+    <stop offset="100%" stop-color="#ff6b81"/>
+  </linearGradient>
+
+  <linearGradient id="lnode" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#b71c1c"/>
+    <stop offset="100%" stop-color="#e50914"/>
+  </linearGradient>
+
+  <linearGradient id="lmongo" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#ff4d6d"/>
+    <stop offset="100%" stop-color="#ffffff"/>
+  </linearGradient>
+
+  <!-- Filters -->
   <filter id="lg" x="-20%" y="-60%" width="140%" height="220%">
     <feGaussianBlur stdDeviation="3" result="blur"/>
     <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -54,13 +67,13 @@
 <style>
 /* Twinkling stars */
 .ls{animation:ltw var(--d,3s) var(--e,0s) infinite ease-in-out;}
-@keyframes ltw{0%,100%{opacity:.12}50%{opacity:.9}}
+@keyframes ltw{0%,100%{opacity:.15}50%{opacity:.95}}
 
 /* Shimmer sweep */
 .lsh{animation:lsw 7s 1s infinite linear;}
 @keyframes lsw{from{transform:translateX(-250px)}to{transform:translateX(1200px)}}
 
-/* Bar grow — ONLY animation, rows are always visible */
+/* Bar grow animation */
 .lbar{transform:scaleX(0);transform-origin:left;animation:lgrow 1.4s forwards cubic-bezier(.15,.85,.3,1);}
 .lb1{animation-delay:.2s}.lb2{animation-delay:.4s}.lb3{animation-delay:.6s}
 .lb4{animation-delay:.8s}.lb5{animation-delay:1.0s}.lb6{animation-delay:1.2s}
@@ -90,122 +103,118 @@
 <!-- Background -->
 <rect width="900" height="420" rx="22" fill="url(#lbg)"/>
 
-<!-- Stars — always visible with twinkle -->
-<circle class="ls" cx="820" cy="22"  r="1.5" fill="#4fc3f7" style="--d:2.3s;--e:.2s"/>
-<circle class="ls" cx="55"  cy="16"  r="1"   fill="#fff"    style="--d:3.5s;--e:.9s"/>
-<circle class="ls" cx="755" cy="48"  r="1.5" fill="#ffd54f" style="--d:2.7s;--e:1.2s"/>
-<circle class="ls" cx="872" cy="108" r="1"   fill="#a5d6a7" style="--d:4.0s;--e:.4s"/>
-<circle class="ls" cx="675" cy="28"  r="1"   fill="#fff"    style="--d:3.1s;--e:1.7s"/>
-<circle class="ls" cx="28"  cy="295" r="1.5" fill="#4fc3f7" style="--d:2.5s;--e:.7s"/>
-<circle class="ls" cx="875" cy="372" r="1"   fill="#fff"    style="--d:3.8s;--e:1.4s"/>
-<circle class="ls" cx="118" cy="398" r="1.5" fill="#ffd54f" style="--d:2.2s;--e:2.0s"/>
-<circle class="ls" cx="450" cy="10"  r="1"   fill="#fff"    style="--d:4.2s;--e:.6s"/>
-<circle class="ls" cx="355" cy="400" r="1"   fill="#80deea" style="--d:3.3s;--e:1.8s"/>
-<circle class="ls" cx="198" cy="14"  r="1.5" fill="#4fc3f7" style="--d:2.9s;--e:.3s"/>
-<circle class="ls" cx="622" cy="408" r="1"   fill="#fff"    style="--d:3.6s;--e:2.2s"/>
+<!-- Stars (Crimson & White) -->
+<circle class="ls" cx="820" cy="22"  r="1.5" fill="#ff1e42" style="--d:2.3s;--e:.2s"/>
+<circle class="ls" cx="55"  cy="16"  r="1"   fill="#ffffff" style="--d:3.5s;--e:.9s"/>
+<circle class="ls" cx="755" cy="48"  r="1.5" fill="#ff4d6d" style="--d:2.7s;--e:1.2s"/>
+<circle class="ls" cx="872" cy="108" r="1"   fill="#ffffff" style="--d:4.0s;--e:.4s"/>
+<circle class="ls" cx="675" cy="28"  r="1"   fill="#ff1e42" style="--d:3.1s;--e:1.7s"/>
+<circle class="ls" cx="28"  cy="295" r="1.5" fill="#ffffff" style="--d:2.5s;--e:.7s"/>
+<circle class="ls" cx="875" cy="372" r="1"   fill="#ff1e42" style="--d:3.8s;--e:1.4s"/>
+<circle class="ls" cx="118" cy="398" r="1.5" fill="#ffffff" style="--d:2.2s;--e:2.0s"/>
+<circle class="ls" cx="450" cy="10"  r="1"   fill="#ff4d6d" style="--d:4.2s;--e:.6s"/>
+<circle class="ls" cx="355" cy="400" r="1"   fill="#ffffff" style="--d:3.3s;--e:1.8s"/>
+<circle class="ls" cx="198" cy="14"  r="1.5" fill="#ff1e42" style="--d:2.9s;--e:.3s"/>
+<circle class="ls" cx="622" cy="408" r="1"   fill="#ffffff" style="--d:3.6s;--e:2.2s"/>
 
-<!-- Card -->
+<!-- Card Interior -->
 <rect x="10" y="10" width="880" height="400" rx="22"
-      fill="#080f1e" stroke="url(#ltitle)" stroke-width="1.5" stroke-opacity=".6"/>
+      fill="#0a0a0c" stroke="url(#ltitle)" stroke-width="1.5" stroke-opacity=".7"/>
 
-<!-- Shimmer (clipped) -->
+<!-- Shimmer sweep -->
 <g clip-path="url(#lclip)">
   <rect class="lsh" x="-160" y="0" width="60" height="420"
-        fill="white" opacity=".055" transform="skewX(-15)"/>
+        fill="white" opacity=".05" transform="skewX(-15)"/>
 </g>
 
-<!-- Corner brackets -->
+<!-- Corner brackets in Crimson Red -->
 <path class="lbrk" d="M28,28 L28,54 M28,28 L54,28"
-      fill="none" stroke="#00ffff" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
+      fill="none" stroke="#ff1e42" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
 <path class="lbrk" d="M872,28 L872,54 M872,28 L846,28"
-      fill="none" stroke="#00ffff" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
+      fill="none" stroke="#ff1e42" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
 <path class="lbrk" d="M28,392 L28,366 M28,392 L54,392"
-      fill="none" stroke="#00ffff" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
+      fill="none" stroke="#ff1e42" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
 <path class="lbrk" d="M872,392 L872,366 M872,392 L846,392"
-      fill="none" stroke="#00ffff" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
+      fill="none" stroke="#ff1e42" stroke-width="3" stroke-linecap="round" filter="url(#lsg)"/>
 
 <!-- Title -->
 <text x="42"  y="50" class="lblt" font-size="22" font-family="Segoe UI,Arial,sans-serif">⚡</text>
 <text x="70"  y="50" font-size="26" font-family="Segoe UI,Arial,sans-serif" font-weight="800"
       fill="url(#ltitle)" filter="url(#lsg)">Most Used Languages</text>
 <!-- Divider line -->
-<rect x="40" y="62" width="820" height="1.5" rx="1" fill="#1e2d45"/>
+<rect x="40" y="62" width="820" height="1.5" rx="1" fill="#2d0a0e"/>
 
 <!-- ═══ Row 1 — JavaScript 95% ═══ -->
-<!-- dot + label (always visible) -->
-<circle cx="48" cy="100" r="6" fill="#ffd54f" filter="url(#lg)" class="ldot" style="--e:0s"/>
+<circle cx="48" cy="100" r="6" fill="#ff1744" filter="url(#lg)" class="ldot" style="--e:0s"/>
 <text x="64" y="105" font-size="15" font-family="Segoe UI,Arial,sans-serif"
-      font-weight="600" fill="#e2e8f0">🟡 JavaScript</text>
-<!-- track -->
-<rect x="265" y="91" width="530" height="16" rx="8" fill="#0d2040"/>
-<!-- animated bar -->
+      font-weight="600" fill="#ffffff">🔴 JavaScript</text>
+<rect x="265" y="91" width="530" height="16" rx="8" fill="#1f0a0d"/>
 <rect x="265" y="91" width="503" height="16" rx="8" fill="url(#ljs)" class="lbar lb1"/>
-<!-- percent -->
 <text x="858" y="104" text-anchor="end" font-size="14" font-family="Consolas,monospace"
-      font-weight="700" fill="#ffd54f" class="lpct lp1">95%</text>
+      font-weight="700" fill="#ff5252" class="lpct lp1">95%</text>
 
 <!-- ═══ Row 2 — TypeScript 90% ═══ -->
-<circle cx="48" cy="138" r="6" fill="#64b5f6" filter="url(#lg)" class="ldot" style="--e:.3s"/>
+<circle cx="48" cy="138" r="6" fill="#ffffff" filter="url(#lg)" class="ldot" style="--e:.3s"/>
 <text x="64" y="143" font-size="15" font-family="Segoe UI,Arial,sans-serif"
-      font-weight="600" fill="#e2e8f0">🔵 TypeScript</text>
-<rect x="265" y="129" width="530" height="16" rx="8" fill="#0d2040"/>
+      font-weight="600" fill="#ffffff">⚪ TypeScript</text>
+<rect x="265" y="129" width="530" height="16" rx="8" fill="#1f0a0d"/>
 <rect x="265" y="129" width="477" height="16" rx="8" fill="url(#lts)" class="lbar lb2"/>
 <text x="858" y="142" text-anchor="end" font-size="14" font-family="Consolas,monospace"
-      font-weight="700" fill="#64b5f6" class="lpct lp2">90%</text>
+      font-weight="700" fill="#ffffff" class="lpct lp2">90%</text>
 
 <!-- ═══ Row 3 — HTML 88% ═══ -->
-<circle cx="48" cy="176" r="6" fill="#ff8a65" filter="url(#lg)" class="ldot" style="--e:.6s"/>
+<circle cx="48" cy="176" r="6" fill="#d50000" filter="url(#lg)" class="ldot" style="--e:.6s"/>
 <text x="64" y="181" font-size="15" font-family="Segoe UI,Arial,sans-serif"
-      font-weight="600" fill="#e2e8f0">🔴 HTML</text>
-<rect x="265" y="167" width="530" height="16" rx="8" fill="#0d2040"/>
+      font-weight="600" fill="#ffffff">🔴 HTML</text>
+<rect x="265" y="167" width="530" height="16" rx="8" fill="#1f0a0d"/>
 <rect x="265" y="167" width="466" height="16" rx="8" fill="url(#lhtml)" class="lbar lb3"/>
 <text x="858" y="180" text-anchor="end" font-size="14" font-family="Consolas,monospace"
-      font-weight="700" fill="#ff8a65" class="lpct lp3">88%</text>
+      font-weight="700" fill="#ff1744" class="lpct lp3">88%</text>
 
 <!-- ═══ Row 4 — CSS 85% ═══ -->
-<circle cx="48" cy="214" r="6" fill="#81d4fa" filter="url(#lg)" class="ldot" style="--e:.9s"/>
+<circle cx="48" cy="214" r="6" fill="#ff3366" filter="url(#lg)" class="ldot" style="--e:.9s"/>
 <text x="64" y="219" font-size="15" font-family="Segoe UI,Arial,sans-serif"
-      font-weight="600" fill="#e2e8f0">💙 CSS</text>
-<rect x="265" y="205" width="530" height="16" rx="8" fill="#0d2040"/>
+      font-weight="600" fill="#ffffff">⚪ CSS</text>
+<rect x="265" y="205" width="530" height="16" rx="8" fill="#1f0a0d"/>
 <rect x="265" y="205" width="450" height="16" rx="8" fill="url(#lcss)" class="lbar lb4"/>
 <text x="858" y="218" text-anchor="end" font-size="14" font-family="Consolas,monospace"
-      font-weight="700" fill="#81d4fa" class="lpct lp4">85%</text>
+      font-weight="700" fill="#ff4d6d" class="lpct lp4">85%</text>
 
 <!-- ═══ Row 5 — React 83% ═══ -->
-<circle cx="48" cy="252" r="6" fill="#80deea" filter="url(#lg)" class="ldot" style="--e:1.2s"/>
+<circle cx="48" cy="252" r="6" fill="#ff1e42" filter="url(#lg)" class="ldot" style="--e:1.2s"/>
 <text x="64" y="257" font-size="15" font-family="Segoe UI,Arial,sans-serif"
-      font-weight="600" fill="#e2e8f0">⚛️ React</text>
-<rect x="265" y="243" width="530" height="16" rx="8" fill="#0d2040"/>
+      font-weight="600" fill="#ffffff">🔴 React</text>
+<rect x="265" y="243" width="530" height="16" rx="8" fill="#1f0a0d"/>
 <rect x="265" y="243" width="440" height="16" rx="8" fill="url(#lreact)" class="lbar lb5"/>
 <text x="858" y="256" text-anchor="end" font-size="14" font-family="Consolas,monospace"
-      font-weight="700" fill="#80deea" class="lpct lp5">83%</text>
+      font-weight="700" fill="#ff6b81" class="lpct lp5">83%</text>
 
 <!-- ═══ Row 6 — Node.js 92% ═══ -->
-<circle cx="48" cy="290" r="6" fill="#a5d6a7" filter="url(#lg)" class="ldot" style="--e:1.5s"/>
+<circle cx="48" cy="290" r="6" fill="#b71c1c" filter="url(#lg)" class="ldot" style="--e:1.5s"/>
 <text x="64" y="295" font-size="15" font-family="Segoe UI,Arial,sans-serif"
-      font-weight="600" fill="#e2e8f0">🟢 Node.js</text>
-<rect x="265" y="281" width="530" height="16" rx="8" fill="#0d2040"/>
+      font-weight="600" fill="#ffffff">🔴 Node.js</text>
+<rect x="265" y="281" width="530" height="16" rx="8" fill="#1f0a0d"/>
 <rect x="265" y="281" width="488" height="16" rx="8" fill="url(#lnode)" class="lbar lb6"/>
 <text x="858" y="294" text-anchor="end" font-size="14" font-family="Consolas,monospace"
-      font-weight="700" fill="#a5d6a7" class="lpct lp6">92%</text>
+      font-weight="700" fill="#ff1744" class="lpct lp6">92%</text>
 
 <!-- ═══ Row 7 — MongoDB 78% ═══ -->
-<circle cx="48" cy="328" r="6" fill="#c8e6c9" filter="url(#lg)" class="ldot" style="--e:1.8s"/>
+<circle cx="48" cy="328" r="6" fill="#ffffff" filter="url(#lg)" class="ldot" style="--e:1.8s"/>
 <text x="64" y="333" font-size="15" font-family="Segoe UI,Arial,sans-serif"
-      font-weight="600" fill="#e2e8f0">🍃 MongoDB</text>
-<rect x="265" y="319" width="530" height="16" rx="8" fill="#0d2040"/>
+      font-weight="600" fill="#ffffff">⚪ MongoDB</text>
+<rect x="265" y="319" width="530" height="16" rx="8" fill="#1f0a0d"/>
 <rect x="265" y="319" width="413" height="16" rx="8" fill="url(#lmongo)" class="lbar lb7"/>
 <text x="858" y="332" text-anchor="end" font-size="14" font-family="Consolas,monospace"
-      font-weight="700" fill="#c8e6c9" class="lpct lp7">78%</text>
+      font-weight="700" fill="#ffffff" class="lpct lp7">78%</text>
 
 <!-- Bottom text -->
 <text x="450" y="386" text-anchor="middle" font-size="13"
       font-family="Segoe UI,Arial,sans-serif" font-weight="700"
-      fill="#4a7aab" letter-spacing="2">KEEP CODING • KEEP GROWING 🚀</text>
+      fill="#ff4d6d" letter-spacing="2">KEEP CODING • KEEP GROWING 🚀</text>
 <rect x="330" y="395" width="240" height="1.5" rx="1" fill="url(#ltitle)"/>
 
-<!-- Status dots -->
-<circle cx="840" cy="26" r="3.5" fill="#00ff88" opacity=".9"/>
-<circle cx="854" cy="26" r="3.5" fill="#ffcc00" opacity=".8"/>
-<circle cx="868" cy="26" r="3.5" fill="#ff4d6a" opacity=".8"/>
+<!-- Status dots in White & Red shades -->
+<circle cx="840" cy="26" r="3.5" fill="#ffffff" opacity=".95"/>
+<circle cx="854" cy="26" r="3.5" fill="#ff4d6d" opacity=".9"/>
+<circle cx="868" cy="26" r="3.5" fill="#ff1e42" opacity=".95"/>
 </svg>
