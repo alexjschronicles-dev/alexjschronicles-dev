@@ -1,181 +1,200 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.png?v=1">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/banner-light.svg?v=1">
-  <img alt="ALEX JS Banner" src="./assets/banner-dark.png?v=1" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./banner-dark.png?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="./banner-dark.png?v=2">
+  <img alt="ALEX JS Banner" src="./banner-dark.png?v=2" width="100%">
 </picture>
 
-# 👋 Hey, I'm ALEX JS
+<br/>
 
-### 💜 Discord Bot Developer • 🌐 Frontend Web Developer • 🚀 Founder of Chronicles Community
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=28&pause=800&color=00D4FF&center=true&vCenter=true&width=700&lines=Hey+there!+I'm+ALEX+JS+👋;Discord+Bot+Developer+🤖;Frontend+Web+Developer+💻;Founder+of+Chronicles+Community+👑;Always+Coding+%E2%80%A2+Always+Growing+🚀" alt="Typing SVG">
 
-<p>
-  <img src="https://komarev.com/ghpvc/?username=alexjschronicles-dev&label=Profile%20Views&color=4FC3F7&style=for-the-badge" />
-</p>
+<br/>
 
 <p>
-
-<a href="mailto:alexjschronicles@gmail.com">
-<img src="https://img.shields.io/badge/Email-2196F3?style=for-the-badge&logo=gmail&logoColor=white">
-</a>
-
-<a href="https://discord.gg/CRbua5bHNV">
-<img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white">
-</a>
-
-<a href="https://loveofart.online">
-<img src="https://img.shields.io/badge/Website-00BCD4?style=for-the-badge&logo=google-chrome&logoColor=white">
-</a>
-
+  <a href="mailto:alexjschronicles@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0a0a">
+  </a>&nbsp;
+  <a href="https://discord.gg/CRbua5bHNV">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=0a0a0a">
+  </a>&nbsp;
+  <a href="https://loveofart.online">
+    <img src="https://img.shields.io/badge/Website-00BCD4?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0a0a0a">
+  </a>&nbsp;
+  <a href="https://github.com/alexjschronicles-dev">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0a0a">
+  </a>
 </p>
 
----
-
-<img src="./lanyard.svg?v=1" width="380">
+<img src="https://komarev.com/ghpvc/?username=alexjschronicles-dev&label=Profile+Views&color=00d4ff&style=for-the-badge&labelColor=0a0a0a"/>
 
 </div>
 
-# 💫 About Me
+---
+
+<div align="center">
+
+## 💫 About Me
+
+</div>
 
 ```javascript
+╔══════════════════════════════════════════════════════════════╗
+║                    ALEX JS  •  Chronicles                    ║
+╚══════════════════════════════════════════════════════════════╝
+
 const alex = {
-    name: "ALEX JS",
-    role: [
-        "Discord Bot Developer",
-        "Frontend Web Developer"
+    name         : "ALEX JS",
+    title        : ["Discord Bot Developer", "Frontend Web Developer"],
+    community    : "Chronicles 👑",
+    location     : "India 🇮🇳",
+
+    languages    : ["JavaScript ⚡", "TypeScript 🔷"],
+
+    currentStack : {
+        frontend  : ["React ⚛️", "Next.js 🔺", "HTML5 🟠", "CSS3 🔵", "Tailwind 🌊"],
+        backend   : ["Node.js 🟢", "Express.js 🚂"],
+        bots      : ["Discord.js 🤖", "Advanced Slash Commands", "Lavalink 🎵"],
+        databases : ["MongoDB 🍃", "MySQL 🐬"],
+        tools     : ["Git 🔧", "GitHub 🐙", "VS Code 💎", "npm 📦"],
+    },
+
+    currentlyBuilding : [
+        "🤖  Premium Discord Bots with AI integration",
+        "🌐  Full-Stack Web Applications",
+        "🎵  Music Streaming Platform with Lavalink",
+        "🎫  Enterprise Ticket & Moderation Systems",
     ],
 
-    community: "Chronicles",
-
-    location: "India",
-
-    language: [
-        "JavaScript",
-        "TypeScript"
-    ],
-
-    currentlyLearning: [
-        "React",
-        "Next.js",
-        "Node.js",
-        "Advanced Discord.js",
-        "MongoDB"
-    ],
-
-    motto: "KEEP CODING • KEEP GROWING 🚀"
+    motto        : "KEEP CODING • KEEP GROWING 🚀",
+    openTo       : "Collaborations, Open Source, Bot Commissions",
 };
 ```
 
 ---
 
-# 🚀 Tech Stack
+## 🚀 Tech Stack
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=js,ts,nodejs,react,nextjs,html,css,tailwind,discord,bots,git,github,vscode,mongodb,mysql,npm&perline=8"/>
+### 🌐 Frontend
+<img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind&perline=7"/>
+
+### ⚙️ Backend & Databases
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,mysql&perline=7"/>
+
+### 🤖 Bot Development
+<img src="https://skillicons.dev/icons?i=discord,bots&perline=7"/>
+
+### 🛠️ Tools & Platforms
+<img src="https://skillicons.dev/icons?i=git,github,vscode,npm,vercel&perline=7"/>
 
 </div>
 
 ---
 
-# 📊 GitHub Statistics
+## 📊 GitHub Statistics
 
 <div align="center">
 
-<img src="./stats.svg?v=1" width="47%">
-<img src="./langs.svg?v=1" width="47%">
+<img src="./stats.svg?v=2" width="49%">
+<img src="./langs.svg?v=2" width="49%">
 
 </div>
 
 ---
 
-# 🏆 Achievements
+## 🏆 Achievements
 
 <div align="center">
 
-<img src="./trophies.svg?v=1" width="95%">
+<img src="./trophies.svg?v=2" width="97%">
 
 </div>
 
 ---
 
-# 📁 Featured Projects
-
-| Project | Description | Tech |
-|----------|-------------|------|
-| 🤖 ART OF LOVE  | Premium Discord Bot with Moderation, Utility  | Discord.js |
-| 💜 Chronicles Community | Community Management Platform | Node.js |
-| 🌐 Portfolio Website | Modern Animated Portfolio | HTML CSS JS |
-| 🎵 Music Website | Lavalink Music Streaming Platform | React |
-| 🎫 Premium Ticket System | Enterprise Ticket Bot | Discord.js |
-| 🛡 Moderation Bot | Auto Moderation & Security | Node.js |
-
----
-
-# 📈 Contribution Graph
+## 📁 Featured Projects
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=alexjschronicles-dev&theme=github-compact&hide_border=true">
+| &nbsp; | Project | Description | Tech Stack | Status |
+|:------:|---------|-------------|:----------:|:------:|
+| 🤖 | **ART OF LOVE** | Premium Discord Bot — Moderation, Utility, Fun | `Discord.js` `Node.js` | 🟢 Live |
+| 👑 | **Chronicles Community** | Community Hub & Management Platform | `Node.js` `MongoDB` | 🟢 Active |
+| 🌐 | **Portfolio Website** | Modern Animated Developer Portfolio | `HTML` `CSS` `JS` | 🟢 Live |
+| 🎵 | **Music Platform** | Lavalink-powered Music Streaming | `React` `Lavalink` | 🔨 Building |
+| 🎫 | **Premium Ticket System** | Enterprise-grade Discord Ticket Bot | `Discord.js` `MongoDB` | 🟢 Live |
+| 🛡️ | **Moderation Bot** | Auto-Mod, Anti-Raid & Security Suite | `Node.js` `Discord.js` | 🟢 Live |
 
 </div>
 
 ---
 
-# 🐍 Contribution Snake
+## 📈 Contribution Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=alexjschronicles-dev&theme=react-dark&hide_border=true&bg_color=040d1e&color=00d4ff&line=0066ff&point=ffffff&area=true&area_color=00d4ff" width="97%">
+
+</div>
+
+---
+
+## 🐍 Contribution Snake
 
 <div align="center">
 
 <picture>
-
-<source
-media="(prefers-color-scheme: dark)"
-srcset="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake-dark.svg">
-
-<source
-media="(prefers-color-scheme: light)"
-srcset="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake.svg">
-
-<img
-alt="Snake Animation"
-src="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake-dark.svg">
-
+  <source media="(prefers-color-scheme: dark)"
+          srcset="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)"
+          srcset="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake.svg">
+  <img alt="Snake Animation"
+       src="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev/output/github-contribution-grid-snake-dark.svg">
 </picture>
 
 </div>
 
 ---
 
-# 🌟 Current Focus
+## 🌟 Current Focus
 
-- 🤖 Building Premium Discord Bots
-- ⚡ Creating Advanced Automation Systems
-- 🎨 Designing Modern Frontend Websites
-- 🚀 Learning New Web Technologies
-- 🌍 Growing the Chronicles Community
+<div align="center">
+
+| Priority | What I'm Building |
+|:--------:|-------------------|
+| 🔴 **HIGH** | AI-powered Premium Discord Bots |
+| 🟠 **HIGH** | Full-Stack Next.js Applications |
+| 🟡 **MED**  | Advanced Auto-Moderation Systems |
+| 🟢 **MED**  | Open Source Bot Templates |
+| 🔵 **LOW**  | Growing Chronicles Community to 10K |
+
+</div>
 
 ---
 
-# 📬 Connect With Me
+## 📬 Connect With Me
 
 <div align="center">
 
 <a href="mailto:alexjschronicles@gmail.com">
-<img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
-</a>
-
+  <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white">
+</a>&nbsp;
 <a href="https://discord.gg/CRbua5bHNV">
-<img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white">
-</a>
-
+  <img src="https://img.shields.io/badge/Chronicles_Server-5865F2?style=for-the-badge&logo=discord&logoColor=white">
+</a>&nbsp;
 <a href="https://loveofart.online">
-<img src="https://img.shields.io/badge/Website-00BCD4?style=for-the-badge&logo=googlechrome&logoColor=white">
+  <img src="https://img.shields.io/badge/Portfolio-00BCD4?style=for-the-badge&logo=googlechrome&logoColor=white">
+</a>&nbsp;
+<a href="https://github.com/alexjschronicles-dev">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
 </a>
 
-<a href="https://github.com/alexjschronicles-dev">
-<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github">
-</a>
+<br/><br/>
+
+> 💜 **Open for:** Bot Commissions • Collaborations • Open Source Projects
 
 </div>
 
@@ -183,14 +202,12 @@ src="https://raw.githubusercontent.com/alexjschronicles-dev/alexjschronicles-dev
 
 <div align="center">
 
-## 💜 "KEEP CODING • KEEP GROWING"
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=00D4FF&center=true&vCenter=true&width=700&lines=Thanks+for+visiting+my+profile!+⭐;Star+my+repos+if+you+find+them+useful!;KEEP+CODING+%E2%80%A2+KEEP+GROWING+🚀" alt="Footer">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=1000&color=4FC3F7&center=true&vCenter=true&width=600&lines=Discord+Bot+Developer;Frontend+Web+Developer;Founder+of+Chronicles;Always+Learning+New+Things;Thanks+for+Visiting+My+Profile!">
+<br/>
 
----
+**Made with ❤️ by ALEX JS — Chronicles Community 👑**
 
-⭐ **If you like my work, consider giving a star to my repositories!**
-
-Made with ❤️ by **ALEX JS**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,17,20,24&height=80&section=footer" width="100%"/>
 
 </div>
